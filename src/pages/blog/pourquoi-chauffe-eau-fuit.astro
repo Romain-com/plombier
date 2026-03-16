@@ -1,0 +1,169 @@
+---
+import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+import siteData from '../../data/site-data.json';
+
+const phone = siteData.company.phone;
+const phoneRaw = siteData.company.phoneRaw;
+---
+
+<BlogPostLayout
+  title="Pourquoi mon chauffe-eau fuit ? Causes et solutions"
+  seoTitle="Pourquoi mon chauffe-eau fuit ? Causes et solutions | Plombier Lyon"
+  description="Votre chauffe-eau fuit ? Découvrez les 5 causes principales et les solutions pour chaque cas. Quand réparer, quand remplacer."
+  canonicalPath="/blog/pourquoi-chauffe-eau-fuit/"
+  date="2025-03-01"
+  relatedArticles={[
+    { slug: 'que-faire-fuite-eau', title: "Que faire en cas de fuite d'eau ?", excerpt: "Les gestes d'urgence à adopter immédiatement face à une fuite.", date: '2025-01-15' },
+    { slug: 'comment-couper-eau-appartement', title: "Comment couper l'eau dans un appartement ?", excerpt: "Trouvez et utilisez votre robinet d'arrêt en toute simplicité.", date: '2025-02-01' },
+    { slug: 'comment-deboucher-evier', title: 'Comment déboucher un évier ?', excerpt: '5 méthodes efficaces classées de la plus douce à la plus radicale.', date: '2025-02-15' },
+  ]}
+  serviceLinks={[
+    { href: '/services/reparation-chauffe-eau-lyon/', label: 'Réparation chauffe-eau à Lyon' },
+    { href: '/services/installation-chauffe-eau-lyon/', label: 'Installation chauffe-eau à Lyon' },
+  ]}
+>
+  <p>
+    Une flaque d'eau sous le chauffe-eau n'est jamais bon signe. Mais avant de paniquer, sachez que toutes
+    les fuites ne se valent pas : certaines sont bénignes et se réparent en moins d'une heure, d'autres
+    signalent qu'il est temps de remplacer l'appareil.
+  </p>
+  <p>
+    Voici les 5 causes les plus fréquentes d'une fuite sur un chauffe-eau, comment les identifier, et la
+    marche à suivre pour chacune.
+  </p>
+
+  <h2>Cause 1 — Le groupe de sécurité qui goutte</h2>
+
+  <p>
+    C'est la cause la plus fréquente — et souvent la moins grave.
+  </p>
+  <p>
+    Le groupe de sécurité est un dispositif fixé sur l'arrivée d'eau froide du chauffe-eau. Son rôle est
+    d'évacuer le surplus de pression qui se crée quand l'eau chauffe et se dilate à l'intérieur de la cuve.
+  </p>
+  <ul>
+    <li><strong>Un léger goutte-à-goutte pendant la chauffe</strong> (généralement la nuit en heures creuses) est <strong>tout à fait normal</strong>. Le groupe évacue environ 3% du volume de la cuve à chaque cycle de chauffe.</li>
+    <li><strong>Si ça coule en permanence</strong>, y compris quand le ballon ne chauffe pas, le groupe de sécurité est défectueux. Le clapet anti-retour ne fait plus son travail.</li>
+  </ul>
+  <p>
+    <strong>Solution :</strong> remplacement du groupe de sécurité. C'est une pièce peu coûteuse (30 à 50 €)
+    et l'intervention est rapide pour un plombier. C'est aussi l'occasion de vérifier l'état du siphon
+    d'évacuation et du raccord.
+  </p>
+
+  <h2>Cause 2 — Un raccord d'arrivée ou de sortie d'eau qui fuit</h2>
+
+  <p>
+    Les raccords situés sur les tuyaux d'arrivée d'eau froide et de sortie d'eau chaude du ballon peuvent
+    fuir pour plusieurs raisons :
+  </p>
+  <ul>
+    <li>Un raccord desserré par les vibrations ou les variations de pression</li>
+    <li>Un joint usé ou durci par le calcaire et la chaleur</li>
+    <li>Un filetage endommagé</li>
+  </ul>
+  <p>
+    <strong>Comment vérifier :</strong> passez la main le long des raccords (chauffe-eau éteint et eau
+    tiède). Si vous sentez de l'humidité à un endroit précis, c'est le raccord qui fuit, pas la cuve.
+  </p>
+  <p>
+    <strong>Solution :</strong> resserrer le raccord ou remplacer le joint. C'est une réparation simple
+    qui ne nécessite pas de changer le chauffe-eau. Un plombier pourra aussi en profiter pour remplacer
+    les flexibles s'ils sont anciens.
+  </p>
+
+  <h2>Cause 3 — La cuve percée</h2>
+
+  <p>
+    C'est le diagnostic que personne ne veut entendre, mais c'est une réalité avec les chauffe-eau
+    vieillissants.
+  </p>
+  <p>
+    Si l'eau coule directement du bas de la cuve (et non d'un raccord ou du groupe de sécurité), c'est
+    que la cuve est percée par la corrosion interne. Avec le temps, le calcaire et l'eau chaude attaquent
+    la paroi en acier émaillé, surtout si l'anode de protection (magnésium ou titane) n'a pas été
+    remplacée régulièrement.
+  </p>
+  <p>
+    <strong>Solution :</strong> malheureusement, une cuve percée est <strong>irréparable</strong>. Il faut
+    remplacer le chauffe-eau. Cela arrive généralement après 10 à 15 ans d'utilisation, selon la qualité
+    de l'eau et l'entretien.
+  </p>
+
+  <h2>Cause 4 — Le thermostat défectueux</h2>
+
+  <p>
+    Le thermostat régule la température de l'eau dans la cuve (généralement entre 55°C et 65°C). S'il
+    tombe en panne, deux scénarios sont possibles :
+  </p>
+  <ul>
+    <li><strong>Eau trop chaude :</strong> le thermostat ne coupe plus la résistance, l'eau surchauffe, la pression augmente anormalement et le groupe de sécurité s'ouvre en grand pour compenser. Résultat : une fuite abondante au niveau du groupe.</li>
+    <li><strong>Eau pas assez chaude :</strong> le thermostat coupe trop tôt, l'eau est tiède. Pas de fuite directe, mais c'est le signe d'un dysfonctionnement.</li>
+  </ul>
+  <p>
+    <strong>Comment repérer :</strong> si le groupe de sécurité coule abondamment et que l'eau qui sort
+    des robinets est brûlante, le thermostat est probablement en cause.
+  </p>
+  <p>
+    <strong>Solution :</strong> remplacement du thermostat. C'est une pièce accessible et la réparation
+    est rapide.
+  </p>
+
+  <h2>Cause 5 — La bride ou le joint de bride</h2>
+
+  <p>
+    Sur les chauffe-eau à résistance stéatite (la résistance est protégée par un fourreau et ne trempe
+    pas dans l'eau), l'accès à la résistance se fait par une bride boulonnée en bas de la cuve.
+  </p>
+  <p>
+    Avec le temps, le joint de cette bride peut s'user, se déformer ou se calcifier, laissant l'eau
+    s'échapper. La fuite se manifeste par un suintement autour de la bride, en bas du chauffe-eau.
+  </p>
+  <p>
+    <strong>Solution :</strong> remplacement du joint de bride. C'est une intervention courante qui
+    nécessite de vidanger le chauffe-eau au préalable. Le plombier en profitera généralement pour
+    vérifier l'état de la résistance et de l'anode.
+  </p>
+
+  <h2>Réparer ou remplacer ?</h2>
+
+  <p>
+    La question revient à chaque panne. Voici les critères pour vous aider à décider :
+  </p>
+
+  <h3>Réparer si :</h3>
+  <ul>
+    <li>Le chauffe-eau a <strong>moins de 8 ans</strong></li>
+    <li>La fuite provient d'un raccord, du groupe de sécurité ou du joint de bride</li>
+    <li>C'est la première panne</li>
+    <li>Le coût de réparation est raisonnable par rapport au prix d'un appareil neuf</li>
+  </ul>
+
+  <h3>Remplacer si :</h3>
+  <ul>
+    <li>Le chauffe-eau a <strong>plus de 10-12 ans</strong></li>
+    <li>La cuve est percée (aucune réparation possible)</li>
+    <li>Les pannes se répètent (un vieux ballon qui casse régulièrement coûte plus cher à entretenir qu'à remplacer)</li>
+    <li>Votre consommation d'énergie a augmenté (signe d'une résistance entartrée ou d'une isolation dégradée)</li>
+  </ul>
+  <p>
+    Un chauffe-eau neuf est aussi l'occasion de passer à un modèle plus performant, mieux isolé, et
+    adapté à votre consommation actuelle. Les modèles récents consomment en moyenne 10 à 15% d'énergie
+    en moins.
+  </p>
+
+  <div class="inline-cta">
+    <p>Votre chauffe-eau fuit à Lyon ?</p>
+    <p>Diagnostic gratuit sur place par notre plombier.<br/>
+    <a href={`tel:${phoneRaw}`}>Appelez le {phone}</a></p>
+  </div>
+
+  <h2>Les bons réflexes en attendant le plombier</h2>
+
+  <ul>
+    <li>Coupez l'alimentation électrique du chauffe-eau (au disjoncteur dédié)</li>
+    <li>Fermez le robinet d'arrivée d'eau froide du ballon</li>
+    <li>Placez une bassine sous la fuite pour récupérer l'eau</li>
+    <li>Ne touchez pas au groupe de sécurité si de l'eau brûlante en sort</li>
+  </ul>
+</BlogPostLayout>

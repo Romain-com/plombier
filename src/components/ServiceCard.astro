@@ -1,0 +1,73 @@
+---
+export interface Props {
+  slug: string;
+  title: string;
+  shortDescription: string;
+  icon: string;
+  priceFrom: number;
+}
+
+const { slug, title, shortDescription, icon, priceFrom } = Astro.props;
+---
+
+<a href={`/services/${slug}/`} class="service-card card">
+  <span class="service-icon" aria-hidden="true">{icon}</span>
+  <h3 class="service-title">{title}</h3>
+  <p class="service-desc">{shortDescription}</p>
+  <span class="service-price">À partir de {priceFrom}€</span>
+  <span class="service-link">
+    En savoir plus
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+  </span>
+</a>
+
+<style>
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--color-text);
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .service-title {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-sm);
+  }
+
+  .service-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    flex-grow: 1;
+    line-height: 1.6;
+  }
+
+  .service-price {
+    display: inline-block;
+    font-weight: 600;
+    color: var(--color-accent-dark);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    transition: gap var(--transition-fast);
+  }
+
+  .service-card:hover .service-link {
+    gap: var(--space-sm);
+    color: var(--color-accent);
+  }
+</style>

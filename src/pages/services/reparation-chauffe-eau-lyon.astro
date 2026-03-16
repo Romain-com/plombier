@@ -1,0 +1,47 @@
+---
+import ServicePageLayout from '../../layouts/ServicePageLayout.astro';
+
+const faqs = [
+  {
+    question: "Mon chauffe-eau a plus de 10 ans, faut-il le remplacer ?",
+    answer: "Au-delà de 10 à 15 ans, un chauffe-eau perd en efficacité et les pannes deviennent plus fréquentes. Le remplacement est souvent plus économique que des réparations répétées. Nous vous conseillons sur place après diagnostic."
+  },
+  {
+    question: "Réparez-vous toutes les marques de chauffe-eau ?",
+    answer: "Oui, nous intervenons sur toutes les marques : Atlantic, Thermor, De Dietrich, Ariston, Chaffoteaux, Sauter, et bien d'autres. Nous avons les pièces détachées courantes en stock pour une réparation rapide."
+  },
+  {
+    question: "Combien de temps pour retrouver l'eau chaude après réparation ?",
+    answer: "Après réparation ou remplacement de la pièce défectueuse, comptez 2 à 4 heures pour un cycle de chauffe complet sur un ballon électrique. Sur un chauffe-eau instantané gaz, l'eau chaude revient immédiatement."
+  }
+];
+---
+
+<ServicePageLayout
+  slug="reparation-chauffe-eau-lyon"
+  seoTitle="Réparation Chauffe-eau Lyon — Dépannage Express | Plombier Lyon"
+  metaDescription="Panne de chauffe-eau à Lyon ? Réparation rapide tous types : électrique, gaz, thermodynamique. Intervention 24h/24, devis gratuit sur place."
+  h1="Réparation de chauffe-eau à Lyon — Dépannage express"
+  subtitle="Plus d'eau chaude ? Notre plombier diagnostique et répare votre chauffe-eau en urgence, toutes marques et tous types."
+  problemTitle="Une panne de chauffe-eau perturbe tout votre confort"
+  problemText="Plus d'eau chaude au robinet, un chauffe-eau qui fuit par le groupe de sécurité, des bruits inhabituels provenant de la cuve : une panne de chauffe-eau touche l'ensemble du foyer, surtout en hiver. Se laver à l'eau froide, ne pas pouvoir faire la vaisselle — le quotidien devient vite compliqué. Un diagnostic rapide permet souvent de réparer sans avoir à remplacer l'appareil."
+  causesTitle="Les pannes de chauffe-eau les plus fréquentes"
+  causes={[
+    "Résistance entartrée ou grillée, empêchant la montée en température",
+    "Thermostat en panne ou mal réglé",
+    "Groupe de sécurité défaillant qui fuit en continu",
+    "Anode usée provoquant la corrosion progressive de la cuve",
+    "Problème d'alimentation électrique ou de raccordement gaz"
+  ]}
+  interventionTitle="Comment nous réparons votre chauffe-eau"
+  steps={[
+    "Diagnostic complet : contrôle électrique, hydraulique et visuel de l'appareil",
+    "Identification précise de la panne et explication claire du problème",
+    "Devis détaillé avant toute réparation — pas de surprise",
+    "Remplacement des pièces défectueuses (résistance, thermostat, groupe de sécurité, anode…)",
+    "Test de fonctionnement complet et réglage optimal de la température"
+  ]}
+  priceLabel="À partir de 150€"
+  priceNote="Selon la panne — Hors déplacement 60€ — Devis gratuit"
+  faqs={faqs}
+/>

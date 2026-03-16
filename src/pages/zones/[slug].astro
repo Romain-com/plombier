@@ -1,0 +1,15 @@
+---
+import ZonePageLayout from '../../layouts/ZonePageLayout.astro';
+import zones from '../../data/zones.json';
+
+export function getStaticPaths() {
+  return zones.map((zone) => ({
+    params: { slug: zone.slug },
+    props: { zone },
+  }));
+}
+
+const { zone } = Astro.props;
+---
+
+<ZonePageLayout zone={zone} />

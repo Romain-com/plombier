@@ -1,0 +1,47 @@
+---
+import ServicePageLayout from '../../layouts/ServicePageLayout.astro';
+
+const faqs = [
+  {
+    question: "La recherche de fuite abîme-t-elle mon logement ?",
+    answer: "Non, nos techniques de détection sont non destructives. Nous utilisons l'écoute acoustique, la caméra thermique et le gaz traceur pour localiser la fuite avec précision avant d'ouvrir quoi que ce soit. L'intervention de réparation est ensuite ciblée et minimale."
+  },
+  {
+    question: "Mon assurance prend-elle en charge la recherche de fuite ?",
+    answer: "Oui, dans la grande majorité des contrats d'assurance habitation, la recherche de fuite est prise en charge. Nous vous fournissons un rapport de détection complet qui servira de pièce justificative pour votre dossier de sinistre."
+  },
+  {
+    question: "Comment savoir si j'ai une fuite cachée ?",
+    answer: "Relevez votre compteur d'eau le soir avant de vous coucher, ne consommez pas d'eau pendant la nuit, puis relevez le compteur le matin. Si le chiffre a changé, c'est qu'il y a une fuite quelque part dans votre installation."
+  }
+];
+---
+
+<ServicePageLayout
+  slug="recherche-fuite-lyon"
+  seoTitle="Recherche de Fuite Lyon — Détection Professionnelle | Plombier Lyon"
+  metaDescription="Recherche de fuite à Lyon : détection non destructive par caméra, gaz traceur, écoute. Localisation précise sans casser. Devis gratuit."
+  h1="Recherche de fuite à Lyon — Détection professionnelle"
+  subtitle="Fuite invisible, facture d'eau qui explose, tache d'humidité suspecte ? Nous localisons l'origine exacte de la fuite sans destruction."
+  problemTitle="Une fuite cachée peut causer des dégâts invisibles pendant des mois"
+  problemText="Votre facture d'eau a soudainement augmenté sans explication ? Vous constatez une tache d'humidité sur un mur ou un plafond mais impossible d'en trouver l'origine ? Une fuite cachée — dans un mur, sous un carrelage ou dans une canalisation enterrée — peut provoquer des dégâts structurels, des moisissures et une surconsommation d'eau considérable. Seule une détection professionnelle permet de la localiser sans tout casser."
+  causesTitle="D'où peut provenir une fuite cachée ?"
+  causes={[
+    "Fuite encastrée dans un mur ou sous un carrelage, invisible à l'œil nu",
+    "Canalisation enterrée percée par l'usure ou un mouvement de terrain",
+    "Fuite sur une évacuation dissimulée derrière une cloison",
+    "Joint défectueux dans un endroit non accessible sans démontage",
+    "Infiltration d'eau par la toiture, la façade ou un joint de fenêtre"
+  ]}
+  interventionTitle="Notre méthode de recherche de fuite"
+  steps={[
+    "Analyse des symptômes visibles et étude du plan du réseau de votre logement",
+    "Détection par écoute acoustique, caméra thermique ou injection de gaz traceur",
+    "Localisation précise de la fuite sans aucune destruction",
+    "Remise d'un rapport de détection détaillé, utile pour votre dossier d'assurance",
+    "Réparation ciblée avec le strict minimum de dégâts sur votre intérieur"
+  ]}
+  priceLabel="À partir de 120€"
+  priceNote="Hors déplacement 60€ — Rapport de détection inclus"
+  faqs={faqs}
+/>

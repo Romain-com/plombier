@@ -1,0 +1,169 @@
+---
+import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+import siteData from '../../data/site-data.json';
+
+const phone = siteData.company.phone;
+const phoneRaw = siteData.company.phoneRaw;
+---
+
+<BlogPostLayout
+  title="Que faire en cas de fuite d'eau ? Guide complet"
+  seoTitle="Que faire en cas de fuite d'eau ? Guide complet | Plombier Lyon"
+  description="Fuite d'eau chez vous ? Voici les gestes d'urgence à adopter immédiatement, étape par étape. Et quand appeler un plombier."
+  canonicalPath="/blog/que-faire-fuite-eau/"
+  date="2025-01-15"
+  relatedArticles={[
+    { slug: 'comment-couper-eau-appartement', title: "Comment couper l'eau dans un appartement ?", excerpt: "Besoin de couper l'eau en urgence ? Voici comment trouver le robinet d'arrêt.", date: '2025-02-01' },
+    { slug: 'pourquoi-chauffe-eau-fuit', title: 'Pourquoi mon chauffe-eau fuit ?', excerpt: 'Les 5 causes principales et les solutions pour chaque cas.', date: '2025-03-01' },
+    { slug: 'wc-bouche-que-faire', title: 'WC bouché : que faire ?', excerpt: "Solutions rapides à tester chez vous avant d'appeler un plombier.", date: '2025-03-15' },
+  ]}
+  serviceLinks={[
+    { href: '/services/fuite-eau-lyon/', label: "Réparation fuite d'eau à Lyon" },
+    { href: '/services/reparation-chauffe-eau-lyon/', label: 'Dépannage chauffe-eau à Lyon' },
+    { href: '/services/recherche-fuite-lyon/', label: 'Recherche de fuite à Lyon' },
+  ]}
+  howToSchema={{
+    name: "Que faire en cas de fuite d'eau ?",
+    description: "Les gestes d'urgence à adopter immédiatement en cas de fuite d'eau, étape par étape.",
+    steps: [
+      { name: "Couper l'arrivée d'eau", text: "Fermez le robinet d'arrêt général de votre logement (sous l'évier, dans les toilettes ou dans un placard technique) en tournant dans le sens des aiguilles d'une montre." },
+      { name: "Couper l'électricité si nécessaire", text: "Si l'eau touche des prises électriques ou des appareils branchés, coupez immédiatement le courant au disjoncteur général." },
+      { name: "Éponger et protéger", text: "Disposez des serpillères et bassines pour récupérer l'eau résiduelle. Déplacez les meubles et objets de valeur hors de la zone touchée." },
+      { name: "Prévenir les voisins du dessous", text: "En appartement, prévenez immédiatement vos voisins du dessous pour qu'ils puissent protéger leurs affaires." },
+      { name: "Documenter avec des photos", text: "Prenez des photos de la fuite et des dégâts visibles avant de nettoyer. Elles seront indispensables pour la déclaration de sinistre." },
+    ],
+  }}
+>
+  <p>
+    Une fuite d'eau est l'une des urgences domestiques les plus stressantes. Que ce soit un robinet qui goutte,
+    un tuyau qui lâche sous l'évier ou une flaque suspecte au pied du ballon d'eau chaude, chaque minute compte.
+    L'eau qui s'infiltre peut endommager vos sols, vos murs, votre mobilier — et si vous êtes en appartement,
+    elle peut aussi toucher vos voisins du dessous.
+  </p>
+  <p>
+    La bonne nouvelle, c'est qu'avec les bons réflexes, vous pouvez limiter considérablement les dégâts en
+    attendant l'intervention d'un plombier. Voici exactement ce qu'il faut faire, dans l'ordre.
+  </p>
+
+  <h2>Les gestes d'urgence — dans l'ordre</h2>
+
+  <h3>1. Couper l'arrivée d'eau</h3>
+  <p>
+    C'est le premier réflexe à avoir, et le plus important. Tant que l'eau coule, les dégâts s'aggravent.
+  </p>
+  <ul>
+    <li><strong>Le robinet d'arrêt général de votre logement</strong> se trouve le plus souvent sous l'évier de la cuisine, dans les toilettes ou dans un placard technique près de l'entrée. C'est un robinet quart de tour ou une vanne à volant. Tournez-le dans le sens des aiguilles d'une montre pour fermer.</li>
+    <li><strong>Le robinet spécifique à l'appareil</strong> : si la fuite vient d'un lavabo, d'un WC ou du chauffe-eau, chaque appareil possède son propre robinet d'arrêt. Fermez-le en priorité — cela vous permet de couper l'eau à la source sans priver tout le logement.</li>
+    <li><strong>Le robinet d'arrêt de l'immeuble</strong> : si vous ne trouvez pas le vôtre ou si la fuite se situe avant votre compteur, il faudra couper l'eau au niveau de la colonne montante. Prévenez le gardien ou le syndic.</li>
+  </ul>
+
+  <h3>2. Couper l'électricité si nécessaire</h3>
+  <p>
+    Si l'eau touche des prises électriques, des appareils branchés ou un tableau électrique, coupez immédiatement
+    le courant au disjoncteur général. L'eau et l'électricité forment un mélange dangereux — ne prenez aucun risque.
+    Ne touchez pas un appareil électrique mouillé tant que le courant n'est pas coupé.
+  </p>
+
+  <h3>3. Éponger et protéger</h3>
+  <p>
+    Une fois l'eau coupée, limitez la propagation des dégâts :
+  </p>
+  <ul>
+    <li>Disposez des serpillères et des bassines pour récupérer l'eau résiduelle</li>
+    <li>Déplacez les meubles, tapis et objets de valeur hors de la zone touchée</li>
+    <li>Si l'eau a atteint un plafond ou un mur, placez des récipients en dessous pour la récupérer</li>
+  </ul>
+
+  <h3>4. Prévenir les voisins du dessous</h3>
+  <p>
+    Si vous habitez en appartement, une fuite chez vous peut rapidement s'infiltrer chez vos voisins du dessous.
+    Prévenez-les immédiatement pour qu'ils puissent eux aussi protéger leurs affaires. C'est aussi un geste de
+    bon voisinage qui facilitera les démarches avec l'assurance.
+  </p>
+
+  <h3>5. Documenter avec des photos</h3>
+  <p>
+    Avant de nettoyer, prenez des photos de la fuite, des dégâts visibles et de la zone touchée. Ces photos
+    seront indispensables pour votre déclaration de sinistre auprès de votre assurance habitation. Pensez aussi
+    à noter la date et l'heure de la découverte de la fuite.
+  </p>
+
+  <h2>Identifier le type de fuite</h2>
+
+  <p>
+    Toutes les fuites ne se ressemblent pas. Identifier le type de fuite vous aide à comprendre la gravité
+    de la situation et à savoir si vous pouvez agir vous-même ou s'il faut appeler un professionnel.
+  </p>
+
+  <h3>Fuite visible</h3>
+  <p>
+    Un robinet qui goutte, un raccord qui suinte, un tuyau apparent qui perle : ces fuites sont visibles et
+    souvent faciles à localiser. Si le raccord est simplement desserré, un resserrage peut suffire. Mais
+    attention : un joint usé ou un tuyau corrodé nécessitera l'intervention d'un plombier pour un remplacement
+    dans les règles.
+  </p>
+
+  <h3>Fuite cachée</h3>
+  <p>
+    Un mur qui reste humide, un plafond qui se tache, une facture d'eau anormalement élevée, un compteur qui
+    tourne alors que tous les robinets sont fermés : ce sont les signes d'une fuite cachée. Ce type de fuite
+    est souvent le plus vicieux car il peut causer des dégâts importants avant même d'être détecté. Une
+    <strong>recherche de fuite professionnelle</strong> (avec caméra thermique, gaz traceur ou écoute
+    acoustique) sera nécessaire pour la localiser précisément.
+  </p>
+
+  <h3>Fuite sur chauffe-eau</h3>
+  <p>
+    Si l'eau coule du groupe de sécurité, d'un raccord ou de la cuve elle-même, il faut couper l'alimentation
+    en eau froide du ballon et, par sécurité, couper aussi l'alimentation électrique (ou le gaz pour un
+    chauffe-eau gaz). Ne tentez pas de réparer vous-même une fuite sur la cuve — cela nécessite souvent un
+    remplacement du chauffe-eau.
+  </p>
+
+  <h2>Ce qu'il ne faut surtout pas faire</h2>
+
+  <ul>
+    <li>
+      <strong>Ne pas ignorer une « petite » fuite.</strong> Un robinet qui goutte gaspille jusqu'à 120 litres
+      d'eau par jour. Et les petites fuites ont tendance à s'aggraver : un suintement sur un raccord peut
+      devenir une rupture de tuyau en quelques semaines.
+    </li>
+    <li>
+      <strong>Ne pas colmater avec du scotch ou de la pâte à modeler.</strong> Ce sont des solutions
+      temporaires qui donnent un faux sentiment de sécurité. La pression de l'eau finira par vaincre ces
+      réparations de fortune, souvent au pire moment.
+    </li>
+    <li>
+      <strong>Ne pas bricoler si vous n'êtes pas sûr de vous.</strong> Démonter un raccord sans les bons
+      outils ou sans savoir remonter correctement peut transformer une petite fuite en inondation. Si vous
+      avez le moindre doute, fermez l'eau et appelez un professionnel.
+    </li>
+  </ul>
+
+  <h2>Quand appeler un plombier</h2>
+
+  <p>
+    Certaines situations nécessitent l'intervention rapide d'un professionnel :
+  </p>
+  <ul>
+    <li><strong>Fuite importante ou non maîtrisable</strong> — l'eau coule abondamment malgré la fermeture du robinet d'arrêt, ou vous n'arrivez pas à localiser le robinet d'arrêt : appelez immédiatement.</li>
+    <li><strong>Fuite cachée</strong> — vous constatez des traces d'humidité mais ne trouvez pas l'origine : un plombier équipé pourra réaliser une recherche de fuite non destructive.</li>
+    <li><strong>Fuite sur chauffe-eau ou canalisation principale</strong> — ne bricolez pas sur ces installations. Le risque de dégâts (ou de blessure) est trop élevé.</li>
+    <li><strong>Fuite récurrente</strong> — si le même raccord ou la même canalisation fuit régulièrement, c'est le signe d'un problème structurel qui nécessite une réparation en profondeur.</li>
+  </ul>
+
+  <div class="inline-cta">
+    <p>Vous avez une fuite d'eau à Lyon ?</p>
+    <p>Notre plombier intervient en 30 minutes, 24h/24.<br/>
+    <a href={`tel:${phoneRaw}`}>Appelez le {phone}</a></p>
+  </div>
+
+  <h2>En résumé</h2>
+
+  <p>
+    Face à une fuite d'eau, la rapidité de réaction fait toute la différence. Coupez l'eau, sécurisez la zone,
+    documentez les dégâts, puis évaluez si vous pouvez agir vous-même ou s'il faut faire appel à un plombier.
+    Dans le doute, ne prenez pas de risque : un professionnel pourra diagnostiquer le problème et le résoudre
+    durablement, avant que les dégâts ne s'aggravent.
+  </p>
+</BlogPostLayout>

@@ -1,0 +1,493 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroBanner from '../components/HeroBanner.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import PriceTable from '../components/PriceTable.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+import CTACall from '../components/CTACall.astro';
+import siteData from '../data/site-data.json';
+import services from '../data/services.json';
+import testimonials from '../data/testimonials.json';
+import zones from '../data/zones.json';
+import { generateFAQSchema } from '../utils/seo';
+
+const phone = siteData.company.phone;
+const phoneRaw = siteData.company.phoneRaw;
+
+const faqs = [
+  {
+    question: "Combien coûte un dépannage plomberie à Lyon ?",
+    answer: "Le tarif dépend de la nature de l'intervention. Le déplacement est à 60€, un débouchage commence à 90€. Nous établissons toujours un devis gratuit avant d'intervenir pour que vous connaissiez le prix exact."
+  },
+  {
+    question: "En combien de temps intervenez-vous ?",
+    answer: "En moyenne, nous arrivons en 30 minutes sur Lyon et sa métropole. Pour les urgences, nous priorisons les départs immédiats."
+  },
+  {
+    question: "Intervenez-vous le week-end et la nuit ?",
+    answer: "Oui, nous sommes disponibles 24 heures sur 24, 7 jours sur 7, y compris les jours fériés. Les urgences plomberie n'attendent pas."
+  },
+  {
+    question: "Faut-il un devis avant l'intervention ?",
+    answer: "Oui, systématiquement. Notre plombier établit un devis sur place avant de commencer. Vous validez le prix avant toute intervention. Pas de surprise."
+  },
+  {
+    question: "Quelles sont vos garanties ?",
+    answer: "Toutes nos interventions sont garanties. Nous sommes assurés en responsabilité civile professionnelle. Si un problème réapparaît suite à notre intervention, nous revenons gratuitement."
+  },
+  {
+    question: "Quels modes de paiement acceptez-vous ?",
+    answer: "Nous acceptons le paiement par carte bancaire, chèque et espèces. Une facture détaillée vous est remise après chaque intervention."
+  }
+];
+
+const faqSchema = generateFAQSchema(faqs);
+const featuredTestimonials = testimonials.slice(0, 4);
+
+const lyonZones = zones.filter(z => z.slug.startsWith('plombier-lyon-'));
+const metroZones = zones.filter(z => !z.slug.startsWith('plombier-lyon-'));
+---
+
+<BaseLayout
+  title="Plombier Lyon (69000) — Dépannage Urgent 24/7 | Intervention 30 min"
+  description="Plombier à Lyon disponible 24h/24 pour dépannage plomberie : fuite d'eau, débouchage canalisation, réparation chauffe-eau. Intervention rapide en 30 minutes. Devis gratuit."
+  canonicalPath="/"
+  extraSchema={[faqSchema]}
+>
+  <!-- SECTION 1 — Hero Banner -->
+  <HeroBanner
+    title="Plombier à Lyon — Dépannage Urgent 24h/24"
+    subtitle="Intervention en 30 minutes dans tout Lyon et sa métropole"
+  />
+
+  <!-- SECTION 2 — Bandeau de confiance chiffré -->
+  <section class="trust-counter-band">
+    <div class="container">
+      <div class="counter-grid">
+        <div class="counter-item">
+          <span class="counter-value">5/5</span>
+          <span class="counter-icon" aria-hidden="true">⭐</span>
+          <span class="counter-label">{siteData.company.rating.count} avis Google</span>
+        </div>
+        <div class="counter-item">
+          <span class="counter-value">+20 ans</span>
+          <span class="counter-label">d'expérience</span>
+        </div>
+        <div class="counter-item">
+          <span class="counter-value">+2 000</span>
+          <span class="counter-label">interventions réalisées</span>
+        </div>
+        <div class="counter-item">
+          <span class="counter-value">24h/24</span>
+          <span class="counter-label">7j/7 — toute l'année</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — Nos services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Nos services de plomberie à Lyon</h2>
+        <p>Dépannage, réparation et installation — nous répondons à tous vos besoins</p>
+      </div>
+      <div class="grid grid-3">
+        {services.map((service) => (
+          <div class="fade-in">
+            <ServiceCard {...service} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — Tarifs transparents -->
+  <section class="section section-alt" id="tarifs">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Nos tarifs — Transparence totale, zéro surprise</h2>
+        <p>Chez {siteData.company.name}, nous croyons à la transparence. Voici nos tarifs indicatifs pour les interventions les plus courantes. Un devis détaillé vous est toujours remis avant le début des travaux.</p>
+      </div>
+      <div class="fade-in">
+        <PriceTable />
+      </div>
+      <p class="devis-note fade-in">💡 Devis gratuit et sans engagement avant chaque intervention.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — Pourquoi nous choisir -->
+  <section class="section" id="pourquoi-nous">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Pourquoi faire appel à notre équipe ?</h2>
+      </div>
+      <div class="why-grid fade-in">
+        <div class="why-item card">
+          <span class="why-icon" aria-hidden="true">🏠</span>
+          <h3>Artisan local lyonnais</h3>
+          <p>Nous sommes implantés à Lyon depuis plus de 20 ans. Nous connaissons chaque quartier, chaque type de bâti. Vous faites appel à un vrai artisan de proximité, pas à une plateforme anonyme.</p>
+        </div>
+        <div class="why-item card">
+          <span class="why-icon" aria-hidden="true">✅</span>
+          <h3>Intervention garantie</h3>
+          <p>Chaque intervention est garantie. Si le problème réapparaît, nous revenons gratuitement. C'est notre engagement qualité.</p>
+        </div>
+        <div class="why-item card">
+          <span class="why-icon" aria-hidden="true">💰</span>
+          <h3>Prix fixés à l'avance</h3>
+          <p>Pas de mauvaise surprise à la fin. Le devis est établi avant l'intervention et le prix ne change pas. Vous savez exactement ce que vous payez.</p>
+        </div>
+        <div class="why-item card">
+          <span class="why-icon" aria-hidden="true">🕐</span>
+          <h3>Disponible 24h/24 — 7j/7</h3>
+          <p>Une fuite à 3h du matin ? Un WC bouché le dimanche ? Nous intervenons tous les jours, à toute heure, partout dans la métropole de Lyon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — Avis clients -->
+  <section class="section section-alt" id="avis">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Ce que disent nos clients</h2>
+        <p>Plus de 9 clients sur 10 nous recommandent — note de 5/5 sur Google</p>
+      </div>
+      <div class="grid grid-2 fade-in">
+        {featuredTestimonials.map((testimonial) => (
+          <TestimonialCard {...testimonial} />
+        ))}
+      </div>
+      <div class="text-center fade-in" style="margin-top: var(--space-xl);">
+        <a href="https://www.google.com/maps/place/ETS+Roche" class="google-reviews-link" target="_blank" rel="noopener">
+          Voir tous nos avis sur Google →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — Zones d'intervention -->
+  <section class="section" id="zones">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Votre plombier partout à Lyon et sa métropole</h2>
+        <p>Nous intervenons dans tous les arrondissements de Lyon et les villes de la métropole. Temps d'intervention moyen : 30 minutes.</p>
+      </div>
+      <div class="zone-grid fade-in">
+        <div class="zone-group">
+          <h3>Lyon</h3>
+          <div class="zone-tags">
+            {lyonZones.map((zone) => (
+              <a href={`/zones/${zone.slug}/`} class="zone-tag">
+                {zone.name}
+              </a>
+            ))}
+          </div>
+        </div>
+        <div class="zone-group">
+          <h3>Métropole</h3>
+          <div class="zone-tags">
+            {metroZones.map((zone) => (
+              <a href={`/zones/${zone.slug}/`} class="zone-tag">
+                {zone.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8 — Blog -->
+  <section class="section" id="blog">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Conseils plomberie — Notre blog</h2>
+        <p>Guides pratiques pour réagir face aux problèmes de plomberie les plus courants</p>
+      </div>
+      <div class="grid grid-3 fade-in">
+        <a href="/blog/que-faire-fuite-eau/" class="blog-link-card card">
+          <h3>Que faire en cas de fuite d'eau ?</h3>
+          <span>Lire le guide &rarr;</span>
+        </a>
+        <a href="/blog/comment-deboucher-evier/" class="blog-link-card card">
+          <h3>Comment déboucher un évier ?</h3>
+          <span>Lire le guide &rarr;</span>
+        </a>
+        <a href="/blog/wc-bouche-que-faire/" class="blog-link-card card">
+          <h3>WC bouché : que faire ?</h3>
+          <span>Lire le guide &rarr;</span>
+        </a>
+      </div>
+      <div class="text-center fade-in" style="margin-top: var(--space-xl);">
+        <a href="/blog/" class="google-reviews-link">Voir tous les articles &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9 — FAQ -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Questions fréquentes</h2>
+        <p>Tout ce que vous devez savoir sur nos services de plomberie à Lyon</p>
+      </div>
+      <div class="fade-in">
+        <FAQAccordion faqs={faqs} />
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9 — CTA final -->
+  <section class="section cta-final-section">
+    <div class="container text-center">
+      <h2 class="cta-final-title fade-in">Une urgence plomberie ? Appelez-nous maintenant</h2>
+      <p class="cta-final-subtitle fade-in">Disponible 24h/24 — Intervention en 30 minutes — Devis gratuit</p>
+      <div class="cta-final-phone fade-in">
+        <a href={`tel:${phoneRaw}`} class="phone-display">{phone}</a>
+      </div>
+      <div class="cta-final-actions fade-in">
+        <CTACall variant="inline" text={`📞 Appeler — ${phone}`} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* SECTION 2 — Trust Counter Band */
+  .trust-counter-band {
+    background-color: var(--color-primary);
+    padding-block: var(--space-xl);
+  }
+
+  .counter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .counter-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .counter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .counter-value {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+  }
+
+  @media (min-width: 768px) {
+    .counter-value {
+      font-size: var(--text-4xl);
+    }
+  }
+
+  .counter-icon {
+    font-size: var(--text-lg);
+  }
+
+  .counter-label {
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+  }
+
+  /* SECTION 4 — Tarifs note */
+  .devis-note {
+    text-align: center;
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: var(--space-xl);
+  }
+
+  /* SECTION 5 — Why Us */
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  @media (min-width: 768px) {
+    .why-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .why-item {
+    text-align: center;
+    padding: var(--space-xl);
+  }
+
+  .why-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: var(--space-md);
+  }
+
+  .why-item h3 {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-sm);
+  }
+
+  .why-item p {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    line-height: 1.7;
+  }
+
+  /* SECTION 6 — Google Reviews Link */
+  .google-reviews-link {
+    display: inline-block;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: var(--text-base);
+    transition: color var(--transition-fast);
+  }
+
+  .google-reviews-link:hover {
+    color: var(--color-accent);
+  }
+
+  /* SECTION 7 — Zones (inline) */
+  .zone-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  @media (min-width: 768px) {
+    .zone-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .zone-group h3 {
+    margin-bottom: var(--space-md);
+    font-size: var(--text-xl);
+    color: var(--color-primary);
+  }
+
+  .zone-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .zone-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-sm) var(--space-md);
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text);
+    transition: all var(--transition-fast);
+    text-decoration: none;
+  }
+
+  .zone-tag:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* SECTION 8 — Blog link cards */
+  .blog-link-card {
+    text-decoration: none;
+    color: var(--color-text);
+    text-align: center;
+    padding: var(--space-xl);
+  }
+
+  .blog-link-card h3 {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-md);
+  }
+
+  .blog-link-card span {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    transition: color var(--transition-fast);
+  }
+
+  .blog-link-card:hover span {
+    color: var(--color-accent);
+  }
+
+  /* SECTION 10 — CTA Final */
+  .cta-final-section {
+    background-color: var(--color-primary);
+  }
+
+  .cta-final-title {
+    font-size: var(--text-3xl);
+    color: #fff;
+    margin-bottom: var(--space-sm);
+  }
+
+  @media (min-width: 768px) {
+    .cta-final-title {
+      font-size: var(--text-4xl);
+    }
+  }
+
+  .cta-final-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-xl);
+  }
+
+  .cta-final-phone {
+    margin-bottom: var(--space-lg);
+  }
+
+  .phone-display {
+    font-family: var(--font-heading);
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    letter-spacing: 0.02em;
+  }
+
+  @media (min-width: 768px) {
+    .phone-display {
+      font-size: var(--text-5xl);
+    }
+  }
+
+  .phone-display:hover {
+    color: var(--color-accent-light);
+  }
+
+  .cta-final-actions {
+    display: flex;
+    justify-content: center;
+  }
+</style>

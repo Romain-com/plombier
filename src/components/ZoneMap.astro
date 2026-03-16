@@ -1,0 +1,99 @@
+---
+import zones from '../data/zones.json';
+
+const lyonZones = zones.filter(z => z.slug.startsWith('plombier-lyon-'));
+const metroZones = zones.filter(z => !z.slug.startsWith('plombier-lyon-'));
+---
+
+<section class="zone-section section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Zones d'intervention</h2>
+      <p>Nous intervenons en 30 minutes dans tout Lyon et sa métropole</p>
+    </div>
+
+    <div class="zone-grid">
+      <div class="zone-group">
+        <h3>Lyon</h3>
+        <div class="zone-tags">
+          {lyonZones.map((zone) => (
+            <a href={`/zones/${zone.slug}/`} class="zone-tag">
+              {zone.name}
+              <span class="zone-time">{zone.tempsIntervention}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+      <div class="zone-group">
+        <h3>Métropole de Lyon</h3>
+        <div class="zone-tags">
+          {metroZones.map((zone) => (
+            <a href={`/zones/${zone.slug}/`} class="zone-tag">
+              {zone.name}
+              <span class="zone-time">{zone.tempsIntervention}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .zone-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  @media (min-width: 768px) {
+    .zone-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .zone-group h3 {
+    margin-bottom: var(--space-md);
+    font-size: var(--text-xl);
+    color: var(--color-primary);
+  }
+
+  .zone-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .zone-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text);
+    transition: all var(--transition-fast);
+    text-decoration: none;
+  }
+
+  .zone-tag:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .zone-tag:hover .zone-time {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .zone-time {
+    font-size: var(--text-xs);
+    color: var(--color-text-light);
+    transition: color var(--transition-fast);
+  }
+</style>

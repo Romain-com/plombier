@@ -1,0 +1,47 @@
+---
+import ServicePageLayout from '../../layouts/ServicePageLayout.astro';
+
+const faqs = [
+  {
+    question: "Peut-on déboucher soi-même avant d'appeler ?",
+    answer: "En première approche, vous pouvez essayer la ventouse ou verser de l'eau bouillante dans la canalisation. En revanche, évitez les produits chimiques du commerce qui abîment les tuyaux et les joints sans résoudre le problème en profondeur. Si le bouchon persiste, faites appel à un professionnel."
+  },
+  {
+    question: "Combien de temps dure un débouchage ?",
+    answer: "En général, un débouchage prend entre 30 minutes et 1 heure selon la complexité et la localisation du bouchon. Un bouchon d'évier se traite en quelques minutes, tandis qu'une colonne d'immeuble peut nécessiter un peu plus de temps."
+  },
+  {
+    question: "Débouchez-vous les colonnes d'immeuble ?",
+    answer: "Oui, nous intervenons sur les parties communes avec l'accord du syndic ou du gestionnaire. Nous disposons de matériel professionnel adapté aux canalisations de gros diamètre."
+  }
+];
+---
+
+<ServicePageLayout
+  slug="debouchage-canalisation-lyon"
+  seoTitle="Débouchage Canalisation Lyon — Intervention Rapide | Plombier Lyon"
+  metaDescription="Canalisation bouchée à Lyon ? Débouchage professionnel en urgence : évier, douche, WC, colonne d'immeuble. Intervention en 30 min, devis gratuit."
+  h1="Débouchage de canalisation à Lyon — Intervention rapide"
+  subtitle="Évier, douche, baignoire, colonne d'immeuble : nous débouchons toutes vos canalisations avec du matériel professionnel."
+  problemTitle="Une canalisation bouchée bloque votre quotidien"
+  problemText="Une canalisation bouchée, c'est de l'eau qui stagne dans l'évier, une douche qui ne s'écoule plus, des mauvaises odeurs qui envahissent la pièce. Le problème ne se résout pas seul : un bouchon non traité s'aggrave avec le temps et peut provoquer un refoulement d'eaux usées dans votre logement. Plus vous agissez vite, plus le débouchage est simple et économique."
+  causesTitle="Les causes courantes d'une canalisation bouchée"
+  causes={[
+    "Accumulation de graisse et de résidus alimentaires dans l'évier",
+    "Cheveux et résidus de savon dans la douche ou la baignoire",
+    "Objets tombés accidentellement dans la canalisation",
+    "Calcaire et tartre qui réduisent le diamètre des tuyaux",
+    "Racines d'arbres infiltrées dans les canalisations extérieures"
+  ]}
+  interventionTitle="Notre méthode de débouchage"
+  steps={[
+    "Diagnostic du bouchon : localisation précise et identification de la nature de l'obstruction",
+    "Débouchage par furet mécanique ou nettoyage haute pression selon la situation",
+    "Inspection par caméra si nécessaire pour vérifier l'état de la canalisation",
+    "Nettoyage complet et vérification du bon écoulement sur l'ensemble du réseau",
+    "Conseils d'entretien personnalisés pour éviter la récidive"
+  ]}
+  priceLabel="À partir de 90€"
+  priceNote="Hors déplacement 60€ — Devis gratuit avant intervention"
+  faqs={faqs}
+/>

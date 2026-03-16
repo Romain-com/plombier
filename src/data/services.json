@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "fuite-eau-lyon",
+    "title": "Fuite d'eau",
+    "shortDescription": "Détection et réparation rapide de toute fuite d'eau. Intervention en urgence 24h/24 pour stopper toute fuite : tuyaux, robinet, évacuation.",
+    "icon": "💧",
+    "priceFrom": 90,
+    "keywords": ["fuite eau lyon", "réparation fuite", "fuite tuyau", "recherche de fuite"]
+  },
+  {
+    "slug": "debouchage-canalisation-lyon",
+    "title": "Débouchage canalisation",
+    "shortDescription": "Débouchage de canalisations, éviers, douches, WC. Intervention rapide avec matériel professionnel.",
+    "icon": "🪠",
+    "priceFrom": 90,
+    "keywords": ["débouchage canalisation lyon", "canalisation bouchée", "évier bouché"]
+  },
+  {
+    "slug": "reparation-chauffe-eau-lyon",
+    "title": "Réparation chauffe-eau",
+    "shortDescription": "Dépannage et réparation de tous types de chauffe-eau. Plus d'eau chaude ? Nous intervenons en 30 minutes.",
+    "icon": "🔥",
+    "priceFrom": 150,
+    "keywords": ["réparation chauffe eau lyon", "panne chauffe eau", "chauffe eau lyon"]
+  },
+  {
+    "slug": "wc-bouche-lyon",
+    "title": "WC bouché",
+    "shortDescription": "Intervention rapide pour tout WC bouché ou qui déborde. Matériel professionnel et résultat garanti.",
+    "icon": "🚽",
+    "priceFrom": 90,
+    "keywords": ["wc bouché lyon", "débouchage toilettes", "toilettes bouchées"]
+  },
+  {
+    "slug": "recherche-fuite-lyon",
+    "title": "Recherche de fuite",
+    "shortDescription": "Détection professionnelle de fuite non visible. Diagnostic précis avec matériel de pointe.",
+    "icon": "🔍",
+    "priceFrom": 120,
+    "keywords": ["recherche fuite lyon", "détection fuite", "fuite invisible"]
+  },
+  {
+    "slug": "installation-chauffe-eau-lyon",
+    "title": "Installation chauffe-eau",
+    "shortDescription": "Pose et remplacement de chauffe-eau toutes marques. Conseils personnalisés et devis gratuit.",
+    "icon": "🛁",
+    "priceFrom": 200,
+    "keywords": ["installation chauffe eau lyon", "remplacement chauffe eau", "pose chauffe eau"]
+  }
+]

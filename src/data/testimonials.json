@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Marie L.",
+    "zone": "Lyon 3",
+    "rating": 5,
+    "text": "Intervention très rapide pour une fuite dans ma salle de bain. Plombier ponctuel, professionnel et tarif respecté. Je recommande vivement !",
+    "service": "fuite-eau-lyon"
+  },
+  {
+    "name": "Pierre D.",
+    "zone": "Lyon 6",
+    "rating": 5,
+    "text": "Mon chauffe-eau est tombé en panne un dimanche soir. Ils sont venus en moins de 30 minutes. Réparation efficace et prix honnête.",
+    "service": "chauffe-eau-lyon"
+  },
+  {
+    "name": "Sophie M.",
+    "zone": "Villeurbanne",
+    "rating": 5,
+    "text": "WC bouchés un jour férié, intervention rapide et propre. Le plombier a pris le temps de m'expliquer le problème et comment l'éviter.",
+    "service": "debouchage-wc-lyon"
+  },
+  {
+    "name": "Laurent B.",
+    "zone": "Lyon 7",
+    "rating": 5,
+    "text": "Excellent travail pour le remplacement de mon cumulus. Devis respecté, travail soigné et chantier laissé propre. Entreprise sérieuse.",
+    "service": "cumulus-lyon"
+  },
+  {
+    "name": "Catherine R.",
+    "zone": "Lyon 8",
+    "rating": 5,
+    "text": "Fuite d'eau importante dans la cuisine, ils sont arrivés très vite. Réparation impeccable. Merci pour votre réactivité !",
+    "service": "fuite-eau-lyon"
+  },
+  {
+    "name": "Jean-Marc T.",
+    "zone": "Lyon 2",
+    "rating": 5,
+    "text": "Sanibroyeur en panne depuis 2 jours, aucun autre plombier ne voulait intervenir. ETS Roche a résolu le problème en une heure. Top !",
+    "service": "sanibroyeur-lyon"
+  },
+  {
+    "name": "Isabelle G.",
+    "zone": "Écully",
+    "rating": 5,
+    "text": "Canalisation bouchée dans l'immeuble, intervention rapide et efficace. Très bon contact, prix raisonnables. Je recommande.",
+    "service": "debouchage-canalisation-lyon"
+  },
+  {
+    "name": "Nicolas P.",
+    "zone": "Lyon 5",
+    "rating": 5,
+    "text": "Remplacement de chaudière : conseils pertinents, installation propre et dans les délais. Une entreprise familiale comme on les aime.",
+    "service": "remplacement-chaudiere-lyon"
+  },
+  {
+    "name": "Amandine V.",
+    "zone": "Lyon 9",
+    "rating": 5,
+    "text": "Recherche de fuite très professionnelle. Le plombier a trouvé l'origine du problème rapidement. Intervention au top.",
+    "service": "fuite-eau-lyon"
+  },
+  {
+    "name": "François H.",
+    "zone": "Saint-Priest",
+    "rating": 5,
+    "text": "Dépannage urgent un samedi matin. Ponctuel, efficace, transparent sur les tarifs. Rien à redire, je garde le numéro !",
+    "service": "debouchage-wc-lyon"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "service": "Déplacement",
+    "price": "60€ HT",
+    "priceTTC": "66€ TTC",
+    "note": "Forfait fixe (TVA 10% particulier)"
+  },
+  {
+    "service": "Main d'œuvre (par heure)",
+    "price": "75€ HT",
+    "priceTTC": "82,50€ TTC",
+    "note": "TVA 10% particulier"
+  },
+  {
+    "service": "Débouchage WC / canalisation",
+    "price": "à partir de 90€",
+    "priceTTC": "",
+    "note": "Selon complexité"
+  },
+  {
+    "service": "Recherche de fuite",
+    "price": "à partir de 120€",
+    "priceTTC": "",
+    "note": "Diagnostic inclus"
+  },
+  {
+    "service": "Réparation chauffe-eau",
+    "price": "à partir de 150€",
+    "priceTTC": "",
+    "note": "Selon panne"
+  },
+  {
+    "service": "Remplacement cumulus",
+    "price": "à partir de 200€",
+    "priceTTC": "",
+    "note": "Pose comprise, devis gratuit"
+  },
+  {
+    "service": "Remplacement WC",
+    "price": "à partir de 200€",
+    "priceTTC": "",
+    "note": "Pose comprise"
+  }
+]

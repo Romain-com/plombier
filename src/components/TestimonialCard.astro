@@ -1,0 +1,75 @@
+---
+export interface Props {
+  name: string;
+  zone: string;
+  rating: number;
+  text: string;
+}
+
+const { name, zone, rating, text } = Astro.props;
+const stars = Array.from({ length: rating }, () => '★');
+---
+
+<div class="testimonial-card card">
+  <div class="testimonial-quote" aria-hidden="true">"</div>
+  <div class="stars" role="img" aria-label={`${rating} étoiles sur 5`}>
+    {stars.map(() => <span>★</span>)}
+  </div>
+  <p class="testimonial-text">{text}</p>
+  <div class="testimonial-author">
+    <span class="testimonial-name">{name}</span>
+    <span class="testimonial-zone">{zone}</span>
+  </div>
+</div>
+
+<style>
+  .testimonial-card {
+    position: relative;
+    padding-top: var(--space-xl);
+  }
+
+  .testimonial-quote {
+    position: absolute;
+    top: -4px;
+    left: var(--space-md);
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--color-accent);
+    opacity: 0.3;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .stars {
+    margin-bottom: var(--space-sm);
+  }
+
+  .testimonial-text {
+    font-size: var(--text-base);
+    line-height: 1.7;
+    color: var(--color-text);
+    font-style: italic;
+    margin-bottom: var(--space-md);
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-sm);
+  }
+
+  .testimonial-name {
+    font-weight: 600;
+    color: var(--color-primary-dark);
+  }
+
+  .testimonial-zone {
+    color: var(--color-text-light);
+  }
+
+  .testimonial-zone::before {
+    content: '—';
+    margin-right: var(--space-xs);
+  }
+</style>

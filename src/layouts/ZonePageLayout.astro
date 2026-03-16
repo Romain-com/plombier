@@ -1,0 +1,443 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import CTACall from '../components/CTACall.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import siteData from '../data/site-data.json';
+import services from '../data/services.json';
+import zones from '../data/zones.json';
+
+export interface ZoneData {
+  slug: string;
+  name: string;
+  fullName: string;
+  postalCode: string;
+  seoTitle: string;
+  metaDescription: string;
+  h1: string;
+  introduction: string;
+  quartiersCouverts: string[];
+  tempsIntervention: string;
+  specificites: string[];
+  testimonial: { name: string; text: string; rating: number };
+  zonesVoisines: string[];
+}
+
+export interface Props {
+  zone: ZoneData;
+}
+
+const { zone } = Astro.props;
+
+const phone = siteData.company.phone;
+const phoneRaw = siteData.company.phoneRaw;
+
+const neighborZones = zone.zonesVoisines
+  .map((slug) => zones.find((z) => z.slug === slug))
+  .filter(Boolean);
+
+const areaServedSchema = {
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "name": siteData.company.name,
+  "telephone": siteData.company.phone,
+  "url": `${siteData.company.siteUrl}/zones/${zone.slug}/`,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": siteData.company.address.street,
+    "addressLocality": siteData.company.address.city,
+    "postalCode": siteData.company.address.postalCode,
+    "addressRegion": "Auvergne-Rhône-Alpes",
+    "addressCountry": "FR"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": zone.fullName,
+    "postalCode": zone.postalCode
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": siteData.company.rating.value,
+    "reviewCount": siteData.company.rating.count,
+    "bestRating": 5
+  }
+};
+---
+
+<BaseLayout
+  title={zone.seoTitle}
+  description={zone.metaDescription}
+  canonicalPath={`/zones/${zone.slug}/`}
+  ogType="article"
+  extraSchema={[areaServedSchema]}
+>
+  <!-- SECTION 1 — Hero compact -->
+  <section class="zone-hero">
+    <div class="container">
+      <div class="zone-hero-content fade-in">
+        <span class="hero-badge">Intervention en {zone.tempsIntervention}</span>
+        <h1>{zone.h1}</h1>
+        <p class="hero-subtitle">Votre plombier à {zone.fullName} ({zone.postalCode}) — disponible 24h/24, 7j/7</p>
+        <div class="hero-actions">
+          <CTACall variant="inline" text={`Appeler — ${phone}`} />
+        </div>
+        <div class="hero-trust">
+          <span class="hero-trust-item">24h/24 — 7j/7</span>
+          <span class="hero-trust-sep" aria-hidden="true">|</span>
+          <span class="hero-trust-item">Devis gratuit</span>
+          <span class="hero-trust-sep" aria-hidden="true">|</span>
+          <span class="hero-trust-item">5/5 sur Google</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — Introduction localisée -->
+  <section class="section" id="zone-intro">
+    <div class="container">
+      <div class="content-block fade-in">
+        <p class="zone-intro-text">{zone.introduction}</p>
+        <div class="quartiers-list">
+          <strong>Quartiers couverts :</strong>
+          <span>{zone.quartiersCouverts.join(' • ')}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — Services disponibles -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Nos services de plomberie à {zone.name}</h2>
+        <p>Tous nos services sont disponibles en urgence dans votre quartier</p>
+      </div>
+      <div class="grid grid-3 fade-in">
+        {services.map((service) => (
+          <ServiceCard {...service} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — Spécificités locales -->
+  <section class="section" id="specificites">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Plomberie à {zone.name} : les spécificités locales</h2>
+      </div>
+      <ul class="specificites-list fade-in">
+        {zone.specificites.map((spec) => (
+          <li class="specificite-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="specificite-icon"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            <span>{spec}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — Témoignage client -->
+  <section class="section section-alt" id="avis">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Avis client à {zone.name}</h2>
+      </div>
+      <div class="testimonial-wrapper fade-in">
+        <TestimonialCard
+          name={zone.testimonial.name}
+          zone={zone.name}
+          rating={zone.testimonial.rating}
+          text={zone.testimonial.text}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — Zones voisines -->
+  <section class="section" id="zones-voisines">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Nous intervenons aussi à proximité</h2>
+        <p>Nos plombiers couvrent les zones voisines de {zone.name}</p>
+      </div>
+      <div class="zones-voisines-grid fade-in">
+        {neighborZones.map((neighbor) => (
+          <a href={`/zones/${neighbor.slug}/`} class="zone-neighbor-card card">
+            <h3>{neighbor.name}</h3>
+            <span class="zone-neighbor-code">{neighbor.postalCode}</span>
+            <span class="zone-neighbor-time">Intervention en {neighbor.tempsIntervention}</span>
+            <span class="zone-neighbor-link">Voir la page &rarr;</span>
+          </a>
+        ))}
+      </div>
+      <div class="text-center fade-in" style="margin-top: var(--space-xl);">
+        <a href="/" class="back-home-link">Retour à l'accueil</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — CTA final -->
+  <section class="section cta-final-section">
+    <div class="container text-center">
+      <h2 class="cta-final-title fade-in">Besoin d'un plombier à {zone.name} ?</h2>
+      <p class="cta-final-subtitle fade-in">Disponible 24h/24 — Intervention en {zone.tempsIntervention} — Devis gratuit</p>
+      <div class="cta-final-phone fade-in">
+        <a href={`tel:${phoneRaw}`} class="phone-display">{phone}</a>
+      </div>
+      <div class="cta-final-actions fade-in">
+        <CTACall variant="inline" text={`Appeler — ${phone}`} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* --- Hero compact --- */
+  .zone-hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    padding-block: var(--space-3xl) var(--space-2xl);
+    text-align: center;
+  }
+
+  .zone-hero-content {
+    max-width: 700px;
+    margin-inline: auto;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: var(--text-sm);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-lg);
+    letter-spacing: 0.02em;
+  }
+
+  .zone-hero h1 {
+    color: #fff;
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-xl);
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero-trust {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+  }
+
+  .hero-trust-sep {
+    opacity: 0.4;
+  }
+
+  /* --- Introduction --- */
+  .content-block {
+    max-width: 750px;
+    margin-inline: auto;
+  }
+
+  .zone-intro-text {
+    font-size: var(--text-lg);
+    line-height: 1.8;
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .quartiers-list {
+    text-align: center;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+    font-size: var(--text-base);
+    line-height: 1.8;
+  }
+
+  .quartiers-list strong {
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: var(--space-xs);
+  }
+
+  /* --- Spécificités --- */
+  .specificites-list {
+    max-width: 700px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .specificite-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    background: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1.6;
+  }
+
+  .specificite-icon {
+    flex-shrink: 0;
+    color: var(--color-success);
+    margin-top: 2px;
+  }
+
+  /* --- Testimonial --- */
+  .testimonial-wrapper {
+    max-width: 550px;
+    margin-inline: auto;
+  }
+
+  /* --- Zones voisines --- */
+  .zones-voisines-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  @media (min-width: 640px) {
+    .zones-voisines-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .zones-voisines-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .zone-neighbor-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    text-decoration: none;
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .zone-neighbor-card h3 {
+    font-size: var(--text-xl);
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+  }
+
+  .zone-neighbor-code {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    font-weight: 500;
+  }
+
+  .zone-neighbor-time {
+    font-size: var(--text-sm);
+    color: var(--color-accent-dark);
+    font-weight: 600;
+  }
+
+  .zone-neighbor-link {
+    font-size: var(--text-sm);
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-top: var(--space-sm);
+    transition: color var(--transition-fast);
+  }
+
+  .zone-neighbor-card:hover .zone-neighbor-link {
+    color: var(--color-accent);
+  }
+
+  /* --- Back home link --- */
+  .back-home-link {
+    display: inline-block;
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: var(--text-base);
+    transition: color var(--transition-fast);
+  }
+
+  .back-home-link:hover {
+    color: var(--color-accent);
+  }
+
+  /* --- CTA Final --- */
+  .cta-final-section {
+    background-color: var(--color-primary);
+  }
+
+  .cta-final-title {
+    font-size: var(--text-3xl);
+    color: #fff;
+    margin-bottom: var(--space-sm);
+  }
+
+  @media (min-width: 768px) {
+    .cta-final-title {
+      font-size: var(--text-4xl);
+    }
+  }
+
+  .cta-final-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-xl);
+  }
+
+  .cta-final-phone {
+    margin-bottom: var(--space-lg);
+  }
+
+  .phone-display {
+    font-family: var(--font-heading);
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    letter-spacing: 0.02em;
+  }
+
+  @media (min-width: 768px) {
+    .phone-display {
+      font-size: var(--text-5xl);
+    }
+  }
+
+  .phone-display:hover {
+    color: var(--color-accent-light);
+  }
+
+  .cta-final-actions {
+    display: flex;
+    justify-content: center;
+  }
+</style>

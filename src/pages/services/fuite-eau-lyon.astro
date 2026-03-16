@@ -1,0 +1,47 @@
+---
+import ServicePageLayout from '../../layouts/ServicePageLayout.astro';
+
+const faqs = [
+  {
+    question: "Que faire en attendant le plombier pour une fuite ?",
+    answer: "Coupez l'arrivée d'eau générale ou le robinet d'arrêt le plus proche de la fuite. Épongez l'eau stagnante et protégez vos meubles et appareils électriques. Si la fuite est importante, placez une bassine sous le point de fuite en attendant notre arrivée."
+  },
+  {
+    question: "Prenez-vous en charge les dégâts des eaux ?",
+    answer: "Nous ne sommes pas assureur, mais nous fournissons un rapport d'intervention détaillé qui servira de pièce justificative pour votre déclaration de sinistre auprès de votre assurance habitation."
+  },
+  {
+    question: "Une fuite peut-elle venir de chez le voisin ?",
+    answer: "Oui, c'est un cas fréquent en immeuble. Une recherche de fuite professionnelle permet de localiser l'origine exacte, qu'elle soit chez vous, chez un voisin ou dans les parties communes. Nous intervenons avec du matériel de détection adapté."
+  }
+];
+---
+
+<ServicePageLayout
+  slug="fuite-eau-lyon"
+  seoTitle="Fuite d'eau Lyon — Réparation Urgente 24/7 | Plombier Lyon"
+  metaDescription="Fuite d'eau à Lyon ? Notre plombier intervient en urgence 24h/24 pour réparer toute fuite : robinet, canalisation, chauffe-eau. Devis gratuit, intervention en 30 min."
+  h1="Fuite d'eau à Lyon — Réparation urgente 24h/24"
+  subtitle="Votre plombier arrive en 30 minutes pour stopper toute fuite d'eau. Diagnostic précis, réparation immédiate, devis gratuit sur place."
+  problemTitle="Une fuite d'eau ? Chaque minute compte"
+  problemText="Une fuite d'eau peut causer des dégâts importants en très peu de temps : dégât des eaux chez vous ou chez le voisin, apparition de moisissures, surconsommation d'eau sur votre facture. Plus on attend, plus les dommages s'aggravent et plus la réparation coûte cher. Une intervention rapide permet de limiter les dégâts et de retrouver un logement sain."
+  causesTitle="Les causes courantes d'une fuite d'eau"
+  causes={[
+    "Joint usé ou défectueux sur un robinet ou un raccord",
+    "Canalisation percée ou corrodée par le temps",
+    "Raccord mal serré après une installation ou un bricolage",
+    "Gel des canalisations en hiver, provoquant des fissures",
+    "Surpression dans le réseau d'eau de l'immeuble"
+  ]}
+  interventionTitle="Comment nous réparons votre fuite"
+  steps={[
+    "Arrivée sur place en 30 minutes dans tout Lyon",
+    "Diagnostic précis de l'origine et de la gravité de la fuite",
+    "Devis clair et détaillé avant toute intervention",
+    "Réparation immédiate : remplacement de joint, colmatage, soudure ou remplacement de tuyau",
+    "Vérification complète du réseau, nettoyage et remise en état"
+  ]}
+  priceLabel="À partir de 90€"
+  priceNote="Hors déplacement 60€ — Devis gratuit avant intervention"
+  faqs={faqs}
+/>

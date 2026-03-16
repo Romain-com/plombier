@@ -1,0 +1,338 @@
+[
+  {
+    "slug": "plombier-lyon-1",
+    "name": "Lyon 1",
+    "fullName": "1er arrondissement de Lyon",
+    "postalCode": "69001",
+    "seoTitle": "Plombier Lyon 1 (69001) — Dépannage Urgent 24/7 | Intervention 30 min",
+    "metaDescription": "Plombier dans le 1er arrondissement de Lyon. Intervention rapide Terreaux, Pentes de la Croix-Rousse, Hôtel de Ville. Dépannage 24h/24, devis gratuit.",
+    "h1": "Plombier Lyon 1 — Dépannage urgent dans le 1er arrondissement",
+    "introduction": "Le 1er arrondissement de Lyon, entre les Terreaux et les Pentes de la Croix-Rousse, est l'un des quartiers les plus anciens de la ville. Les immeubles canuts, souvent construits au XIXe siècle, présentent des installations de plomberie vieillissantes : canalisations en plomb, évacuations étroites, colonnes montantes fragiles. Notre équipe connaît parfaitement ces spécificités et intervient en 20 minutes dans tout le 1er.",
+    "quartiersCouverts": ["Terreaux", "Pentes de la Croix-Rousse", "Hôtel de Ville", "Place des Terreaux", "Rue de la République (haut)"],
+    "tempsIntervention": "20 minutes",
+    "specificites": [
+      "Immeubles anciens (canuts) avec plomberie d'époque — fuites fréquentes sur joints et raccords vétustes",
+      "Canalisations étroites sujettes aux bouchons",
+      "Accès parfois difficile (escaliers étroits, pas d'ascenseur dans les immeubles canuts)",
+      "Problèmes de pression d'eau dans les étages élevés"
+    ],
+    "testimonial": {
+      "name": "Stéphane R.",
+      "text": "Fuite sous l'évier dans mon appartement rue des Capucins, en plein cœur des Pentes. Le plombier est arrivé en 20 minutes malgré les escaliers et le stationnement compliqué. Travail propre et rapide, je recommande.",
+      "rating": 5
+    },
+    "zonesVoisines": ["plombier-lyon-2", "plombier-lyon-4", "plombier-lyon-6"]
+  },
+  {
+    "slug": "plombier-lyon-2",
+    "name": "Lyon 2",
+    "fullName": "2e arrondissement de Lyon",
+    "postalCode": "69002",
+    "seoTitle": "Plombier Lyon 2 (69002) — Dépannage Urgent Presqu'île | Intervention Rapide",
+    "metaDescription": "Plombier dans le 2e arrondissement de Lyon. Intervention rapide Bellecour, Presqu'île, Confluences, Ainay. Disponible 24h/24.",
+    "h1": "Plombier Lyon 2 — Intervention rapide sur la Presqu'île",
+    "introduction": "Le 2e arrondissement, cœur de la Presqu'île entre Rhône et Saône, mélange immeubles haussmanniens du quartier d'Ainay et constructions modernes du quartier Confluences. Cette diversité architecturale implique des problématiques de plomberie variées. Nous intervenons en 15 à 20 minutes sur tout le 2e arrondissement.",
+    "quartiersCouverts": ["Bellecour", "Ainay", "Perrache", "Confluences", "Place Carnot", "Rue Victor Hugo"],
+    "tempsIntervention": "20 minutes",
+    "specificites": [
+      "Immeubles haussmanniens (Ainay) : plomberie ancienne, colonnes en fonte",
+      "Quartier Confluences : installations récentes mais parfois défauts de construction",
+      "Restaurants et commerces nombreux : débouchages fréquents (graisses)",
+      "Caves inondables près de la Saône"
+    ],
+    "testimonial": {
+      "name": "Jean-Marc T.",
+      "text": "Sanibroyeur en panne depuis 2 jours, aucun autre plombier ne voulait intervenir. ETS Roche a résolu le problème en une heure dans mon appartement rue Auguste Comte. Top !",
+      "rating": 5
+    },
+    "zonesVoisines": ["plombier-lyon-1", "plombier-lyon-5", "plombier-lyon-7"]
+  },
+  {
+    "slug": "plombier-lyon-3",
+    "name": "Lyon 3",
+    "fullName": "3e arrondissement de Lyon",
+    "postalCode": "69003",
+    "seoTitle": "Plombier Lyon 3 (69003) — Dépannage Part-Dieu, Montchat | 24h/24",
+    "metaDescription": "Plombier dans le 3e arrondissement de Lyon : Part-Dieu, Montchat, Villette, Sans Souci. Intervention urgente en 20 min, devis gratuit.",
+    "h1": "Plombier Lyon 3 — Dépannage urgent Part-Dieu et Montchat",
+    "introduction": "Le 3e arrondissement est le plus peuplé de Lyon, de la gare Part-Dieu au quartier résidentiel de Montchat en passant par la Villette et Sans Souci. On y trouve aussi bien des immeubles des années 60-70 que des pavillons anciens. Notre plombier est sur place en 20 minutes.",
+    "quartiersCouverts": ["Part-Dieu", "Montchat", "Villette", "Sans Souci", "Préfecture", "Dauphiné", "Lacassagne"],
+    "tempsIntervention": "15 minutes",
+    "specificites": [
+      "Immeubles années 60-70 (Part-Dieu) : canalisations en cuivre vieillissantes, chauffe-eau à remplacer",
+      "Maisons individuelles (Montchat) : problèmes de canalisations enterrées, recherche de fuite",
+      "Quartier d'affaires Part-Dieu : interventions en bureaux et locaux commerciaux",
+      "Forte densité de population : demandes d'urgence fréquentes"
+    ],
+    "testimonial": {
+      "name": "Marie L.",
+      "text": "Intervention très rapide pour une fuite dans ma salle de bain avenue Lacassagne. Plombier ponctuel, professionnel et tarif respecté. Je recommande vivement !",
+      "rating": 5
+    },
+    "zonesVoisines": ["plombier-lyon-6", "plombier-lyon-7", "plombier-lyon-8", "plombier-villeurbanne"]
+  },
+  {
+    "slug": "plombier-lyon-4",
+    "name": "Lyon 4",
+    "fullName": "4e arrondissement de Lyon",
+    "postalCode": "69004",
+    "seoTitle": "Plombier Lyon 4 (69004) — Dépannage Croix-Rousse | Intervention Rapide",
+    "metaDescription": "Plombier sur la Croix-Rousse (Lyon 4). Intervention rapide plateau et pentes. Spécialiste des immeubles anciens. 24h/24, devis gratuit.",
+    "h1": "Plombier Lyon 4 — Votre plombier sur la Croix-Rousse",
+    "introduction": "La Croix-Rousse, village dans la ville, est connue pour ses immeubles canuts, ses traboules et ses montées escarpées. Le 4e arrondissement, perché sur sa colline, concentre un patrimoine bâti ancien avec des installations de plomberie qui demandent un savoir-faire spécifique. Nous connaissons chaque ruelle du plateau et des pentes.",
+    "quartiersCouverts": ["Plateau Croix-Rousse", "Boulevard de la Croix-Rousse", "Gros Caillou", "Serin"],
+    "tempsIntervention": "20 minutes",
+    "specificites": [
+      "Immeubles canuts : plomberie très ancienne, tuyauterie en plomb à remplacer",
+      "Accès compliqué : escaliers étroits, rues en pente, stationnement difficile — nous nous adaptons",
+      "Pression d'eau variable selon l'altitude sur la colline",
+      "Nombreux appartements en location : interventions pour propriétaires et locataires"
+    ],
+    "testimonial": {
+      "name": "Élodie D.",
+      "text": "Canalisation bouchée un dimanche matin dans mon appartement de la montée de la Grande-Côte. Le plombier a monté ses outils à pied sans broncher. Résultat impeccable, prix conforme au devis.",
+      "rating": 5
+    },
+    "zonesVoisines": ["plombier-lyon-1", "plombier-lyon-9", "plombier-caluire"]
+  },
+  {
+    "slug": "plombier-lyon-5",
+    "name": "Lyon 5",
+    "fullName": "5e arrondissement de Lyon",
+    "postalCode": "69005",
+    "seoTitle": "Plombier Lyon 5 (69005) — Dépannage Vieux Lyon, Fourvière | 24h/24",
+    "metaDescription": "Plombier dans le 5e arrondissement : Vieux Lyon, Fourvière, Point du Jour, Saint-Just. Intervention rapide, spécialiste bâti ancien.",
+    "h1": "Plombier Lyon 5 — Intervention rapide Vieux Lyon et Fourvière",
+    "introduction": "Le 5e arrondissement, du Vieux Lyon classé UNESCO jusqu'au quartier résidentiel du Point du Jour, présente un patrimoine exceptionnel. Les immeubles Renaissance du Vieux Lyon, les maisons de Saint-Just et les résidences du Point du Jour ont chacun leurs particularités. Notre équipe intervient en 25 minutes dans tout le 5e.",
+    "quartiersCouverts": ["Vieux Lyon", "Saint-Jean", "Fourvière", "Saint-Just", "Point du Jour", "Ménival"],
+    "tempsIntervention": "25 minutes",
+    "specificites": [
+      "Vieux Lyon : bâti Renaissance, plomberie très ancienne, contraintes patrimoniales",
+      "Fourvière / Saint-Just : immeubles anciens en hauteur, problèmes de pression",
+      "Point du Jour : résidences années 60-80, chauffe-eau et canalisations à renouveler",
+      "Humidité fréquente dans les parties basses (proximité Saône)"
+    ],
+    "testimonial": {
+      "name": "Nicolas P.",
+      "text": "Remplacement de chaudière dans notre maison de Saint-Just : conseils pertinents, installation propre et dans les délais. Une entreprise familiale comme on les aime.",
+      "rating": 5
+    },
+    "zonesVoisines": ["plombier-lyon-2", "plombier-lyon-9"]
+  },
+  {
+    "slug": "plombier-lyon-6",
+    "name": "Lyon 6",
+    "fullName": "6e arrondissement de Lyon",
+    "postalCode": "69006",
+    "seoTitle": "Plombier Lyon 6 (69006) — Dépannage Brotteaux, Tête d'Or | 24h/24",
+    "metaDescription": "Plombier dans le 6e arrondissement de Lyon : Brotteaux, Foch, Tête d'Or, Masséna. Intervention soignée, devis gratuit, disponible 24h/24.",
+    "h1": "Plombier Lyon 6 — Dépannage dans le 6e arrondissement",
+    "introduction": "Le 6e arrondissement, quartier résidentiel prisé entre le Parc de la Tête d'Or et les Brotteaux, se distingue par ses beaux immeubles bourgeois et ses appartements spacieux. Les installations de plomberie y sont souvent de qualité mais l'ancienneté du bâti nécessite un entretien régulier. Nous intervenons en 20 minutes.",
+    "quartiersCouverts": ["Brotteaux", "Foch", "Tête d'Or", "Masséna", "Bellecombe", "Boulevard des Belges"],
+    "tempsIntervention": "20 minutes",
+    "specificites": [
+      "Immeubles bourgeois haut de gamme : interventions soignées, respect des finitions",
+      "Grandes surfaces d'appartements : réseaux de plomberie étendus",
+      "Chauffe-eau de grande capacité (grands logements familiaux)",
+      "Copropriétés exigeantes : rapports d'intervention détaillés"
+    ],
+    "testimonial": {
+      "name": "Pierre D.",
+      "text": "Mon chauffe-eau est tombé en panne un dimanche soir dans notre appartement boulevard des Belges. Ils sont venus en moins de 30 minutes. Réparation efficace et prix honnête.",
+      "rating": 5
+    },
+    "zonesVoisines": ["plombier-lyon-1", "plombier-lyon-3", "plombier-villeurbanne"]
+  },
+  {
+    "slug": "plombier-lyon-7",
+    "name": "Lyon 7",
+    "fullName": "7e arrondissement de Lyon",
+    "postalCode": "69007",
+    "seoTitle": "Plombier Lyon 7 (69007) — Dépannage Jean Macé, Gerland | Intervention Rapide",
+    "metaDescription": "Plombier dans le 7e arrondissement : Jean Macé, Gerland, Guillotière. Dépannage rapide, tarifs clairs, disponible 24h/24.",
+    "h1": "Plombier Lyon 7 — Dépannage Jean Macé et Gerland",
+    "introduction": "Le 7e arrondissement, en pleine transformation, s'étend de la Guillotière historique au quartier modernisé de Gerland en passant par Jean Macé. On y trouve un mélange d'immeubles anciens, de résidences récentes et de logements étudiants. Intervention en 20 minutes sur tout le 7e.",
+    "quartiersCouverts": ["Jean Macé", "Gerland", "Guillotière", "Jean Jaurès", "Route de Vienne"],
+    "tempsIntervention": "20 minutes",
+    "specificites": [
+      "Guillotière : immeubles anciens, plomberie vétuste, débouchages fréquents",
+      "Gerland : constructions neuves, mais parfois malfaçons sur les installations récentes",
+      "Nombreux logements étudiants : interventions rapides et économiques",
+      "Locaux professionnels et commerces le long de la route de Vienne"
+    ],
+    "testimonial": {
+      "name": "Laurent B.",
+      "text": "Excellent travail pour le remplacement de mon cumulus dans mon studio près de Jean Macé. Devis respecté, travail soigné et chantier laissé propre. Entreprise sérieuse.",
+      "rating": 5
+    },
+    "zonesVoisines": ["plombier-lyon-2", "plombier-lyon-3", "plombier-lyon-8", "plombier-venissieux"]
+  },
+  {
+    "slug": "plombier-lyon-8",
+    "name": "Lyon 8",
+    "fullName": "8e arrondissement de Lyon",
+    "postalCode": "69008",
+    "seoTitle": "Plombier Lyon 8 (69008) — Dépannage Monplaisir, Mermoz | 24h/24",
+    "metaDescription": "Plombier dans le 8e arrondissement de Lyon : Monplaisir, Mermoz, Grand Trou, Bachut. Intervention rapide, devis gratuit.",
+    "h1": "Plombier Lyon 8 — Intervention rapide à Monplaisir et Mermoz",
+    "introduction": "Le 8e arrondissement, quartier résidentiel et familial, s'étend de Monplaisir à Mermoz en passant par le Bachut et le Grand Trou. Les immeubles des années 50 à 80 y sont nombreux, avec des installations de plomberie qui arrivent en fin de vie. Notre plombier est sur place en 20 minutes.",
+    "quartiersCouverts": ["Monplaisir", "Mermoz", "Grand Trou", "Bachut", "Grange Blanche", "États-Unis"],
+    "tempsIntervention": "20 minutes",
+    "specificites": [
+      "Immeubles HLM et résidences des années 60-70 : canalisations et chauffe-eau à remplacer",
+      "Quartier Monplaisir : immeubles plus anciens, fuites sur réseaux cuivre",
+      "Proximité hôpitaux (Grange Blanche) : interventions en cabinets médicaux",
+      "Pavillons individuels : problèmes de canalisations enterrées"
+    ],
+    "testimonial": {
+      "name": "Catherine R.",
+      "text": "Fuite d'eau importante dans la cuisine de mon appartement à Monplaisir, ils sont arrivés très vite. Réparation impeccable. Merci pour votre réactivité !",
+      "rating": 5
+    },
+    "zonesVoisines": ["plombier-lyon-3", "plombier-lyon-7", "plombier-venissieux", "plombier-bron"]
+  },
+  {
+    "slug": "plombier-lyon-9",
+    "name": "Lyon 9",
+    "fullName": "9e arrondissement de Lyon",
+    "postalCode": "69009",
+    "seoTitle": "Plombier Lyon 9 (69009) — Dépannage Vaise, Gorge de Loup | 24h/24",
+    "metaDescription": "Plombier dans le 9e arrondissement : Vaise, Gorge de Loup, Duchère, Saint-Rambert. Dépannage urgent 24h/24, intervention 25 min.",
+    "h1": "Plombier Lyon 9 — Dépannage à Vaise et Gorge de Loup",
+    "introduction": "Le 9e arrondissement, le plus étendu de Lyon, va du quartier dynamique de Vaise aux hauteurs de la Duchère en passant par le village de Saint-Rambert. Cette diversité géographique et architecturale — du neuf à l'ancien, du collectif au pavillon — génère des besoins variés en plomberie. Intervention en 25 minutes.",
+    "quartiersCouverts": ["Vaise", "Gorge de Loup", "La Duchère", "Saint-Rambert", "Île Barbe", "Champvert"],
+    "tempsIntervention": "25 minutes",
+    "specificites": [
+      "Vaise : quartier en pleine rénovation, mix ancien/neuf",
+      "La Duchère : grands ensembles, interventions en copropriété",
+      "Saint-Rambert : maisons individuelles, canalisations longues, recherche de fuite en terrain",
+      "Gorge de Loup : immeubles résidentiels, problèmes classiques (fuites, débouchages)"
+    ],
+    "testimonial": {
+      "name": "Amandine V.",
+      "text": "Recherche de fuite très professionnelle dans notre maison à Saint-Rambert. Le plombier a trouvé l'origine du problème rapidement grâce à son matériel de détection. Intervention au top.",
+      "rating": 5
+    },
+    "zonesVoisines": ["plombier-lyon-4", "plombier-lyon-5", "plombier-caluire"]
+  },
+  {
+    "slug": "plombier-villeurbanne",
+    "name": "Villeurbanne",
+    "fullName": "Villeurbanne",
+    "postalCode": "69100",
+    "seoTitle": "Plombier Villeurbanne (69100) — Dépannage Urgent 24/7 | Intervention 20 min",
+    "metaDescription": "Plombier à Villeurbanne : Gratte-Ciel, Tonkin, Charpennes, Cusset. Dépannage plomberie urgent 24h/24. Intervention rapide, devis gratuit.",
+    "h1": "Plombier à Villeurbanne — Dépannage urgent 24h/24",
+    "introduction": "Villeurbanne, deuxième ville de la métropole de Lyon, est notre territoire d'intervention principal après Lyon intra-muros. Des Gratte-Ciel au Tonkin, de Charpennes à Cusset, nous intervenons en 20 minutes. La ville mélange patrimoine Art Déco (Gratte-Ciel), résidences universitaires et quartiers pavillonnaires.",
+    "quartiersCouverts": ["Gratte-Ciel", "Tonkin", "Charpennes", "Cusset", "Flachet", "Buers", "République"],
+    "tempsIntervention": "20 minutes",
+    "specificites": [
+      "Gratte-Ciel : immeubles Art Déco des années 30, plomberie d'époque à moderniser",
+      "Tonkin / Charpennes : immeubles variés, proximité campus universitaire (demandes étudiantes)",
+      "Cusset / Buers : résidences des années 70, canalisations en fin de vie",
+      "Fort taux de locataires : interventions urgentes fréquentes"
+    ],
+    "testimonial": {
+      "name": "Sophie M.",
+      "text": "WC bouchés un jour férié dans mon appartement aux Gratte-Ciel, intervention rapide et propre. Le plombier a pris le temps de m'expliquer le problème et comment l'éviter.",
+      "rating": 5
+    },
+    "zonesVoisines": ["plombier-lyon-3", "plombier-lyon-6", "plombier-bron", "plombier-decines"]
+  },
+  {
+    "slug": "plombier-bron",
+    "name": "Bron",
+    "fullName": "Bron",
+    "postalCode": "69500",
+    "seoTitle": "Plombier Bron (69500) — Dépannage Plomberie Urgent | Intervention Rapide",
+    "metaDescription": "Plombier à Bron disponible 24h/24. Dépannage plomberie : fuite d'eau, débouchage, chauffe-eau. Intervention en 25 min, devis gratuit.",
+    "h1": "Plombier à Bron — Dépannage rapide 24h/24",
+    "introduction": "Bron, à l'est de Lyon, est une ville résidentielle avec un parc de logements diversifié : grands ensembles de Parilly, pavillons du centre-ville, résidences récentes près du tramway. Nous intervenons à Bron en 25 minutes depuis notre base lyonnaise.",
+    "quartiersCouverts": ["Centre-ville", "Parilly", "Terraillon", "Bron-Vinatier", "Les Essarts"],
+    "tempsIntervention": "25 minutes",
+    "specificites": [
+      "Grands ensembles (Parilly, Terraillon) : interventions en copropriété, colonnes d'immeuble",
+      "Pavillons : canalisations enterrées, recherche de fuite en extérieur",
+      "Proximité aérodrome de Bron : repère géographique connu pour nos techniciens",
+      "Maisons avec sous-sol : problèmes d'humidité et de remontées d'eau"
+    ],
+    "testimonial": {
+      "name": "Thierry C.",
+      "text": "Recherche de fuite dans le jardin de notre pavillon à Bron. Le plombier a localisé la fuite sans tout casser grâce à un appareil de détection acoustique. Tarif raisonnable et travail soigné.",
+      "rating": 5
+    },
+    "zonesVoisines": ["plombier-lyon-3", "plombier-lyon-8", "plombier-villeurbanne", "plombier-decines", "plombier-venissieux"]
+  },
+  {
+    "slug": "plombier-caluire",
+    "name": "Caluire-et-Cuire",
+    "fullName": "Caluire-et-Cuire",
+    "postalCode": "69300",
+    "seoTitle": "Plombier Caluire-et-Cuire (69300) — Dépannage Urgent | 24h/24",
+    "metaDescription": "Plombier à Caluire-et-Cuire. Intervention rapide pour fuite d'eau, débouchage, chauffe-eau. Disponible 24h/24, devis gratuit.",
+    "h1": "Plombier à Caluire-et-Cuire — Intervention rapide",
+    "introduction": "Caluire-et-Cuire, sur les hauteurs au nord de Lyon, est une ville résidentielle et familiale. Entre le bourg historique, les quartiers de Montessuy, Cuire et Saint-Clair, les maisons individuelles et les petites copropriétés dominent le paysage. Intervention en 20 à 25 minutes.",
+    "quartiersCouverts": ["Centre Caluire", "Montessuy", "Cuire", "Saint-Clair", "Vassieux", "Bissardon"],
+    "tempsIntervention": "25 minutes",
+    "specificites": [
+      "Dominante pavillonnaire : canalisations enterrées, fosses septiques encore présentes sur certains secteurs",
+      "Hauteurs de Cuire : pression d'eau variable",
+      "Saint-Clair / Bords de Saône : risque d'humidité et d'inondation en sous-sol",
+      "Copropriétés de taille moyenne : interventions rapides sur parties communes"
+    ],
+    "testimonial": {
+      "name": "Christophe M.",
+      "text": "Chauffe-eau en panne un vendredi soir à Cuire. Le plombier est arrivé en 25 minutes et a réparé la résistance sur place. Service impeccable, même en urgence.",
+      "rating": 5
+    },
+    "zonesVoisines": ["plombier-lyon-4", "plombier-lyon-9", "plombier-villeurbanne"]
+  },
+  {
+    "slug": "plombier-venissieux",
+    "name": "Vénissieux",
+    "fullName": "Vénissieux",
+    "postalCode": "69200",
+    "seoTitle": "Plombier Vénissieux (69200) — Dépannage Plomberie Urgent | 24h/24",
+    "metaDescription": "Plombier à Vénissieux disponible 24h/24. Fuite d'eau, débouchage, chauffe-eau. Intervention rapide en 25 minutes, devis gratuit.",
+    "h1": "Plombier à Vénissieux — Dépannage urgent 24h/24",
+    "introduction": "Vénissieux, au sud de Lyon, est la quatrième ville de la métropole. Du centre-ville aux Minguettes en passant par Parilly et le Moulin à Vent, nous intervenons dans toute la commune en 25 minutes. Les grands ensembles et les résidences des années 60-70 sont particulièrement concernés par les problèmes de plomberie.",
+    "quartiersCouverts": ["Centre-ville", "Minguettes", "Parilly", "Moulin à Vent", "Max Barel", "Charles Perrault"],
+    "tempsIntervention": "25 minutes",
+    "specificites": [
+      "Grands ensembles (Minguettes) : interventions sur colonnes montantes, copropriétés",
+      "Immeubles années 60-70 : canalisations en fin de vie, chauffe-eau à remplacer",
+      "Zone industrielle sud : interventions en locaux professionnels",
+      "Logements sociaux : travail avec les bailleurs (coordination syndics et gestionnaires)"
+    ],
+    "testimonial": {
+      "name": "Karim B.",
+      "text": "Dégât des eaux dans l'appartement du dessus qui s'est propagé chez moi aux Minguettes. ETS Roche est intervenu en urgence, a coupé l'arrivée d'eau et réparé la fuite rapidement. Très professionnel.",
+      "rating": 5
+    },
+    "zonesVoisines": ["plombier-lyon-7", "plombier-lyon-8", "plombier-bron"]
+  },
+  {
+    "slug": "plombier-decines",
+    "name": "Décines-Charpieu",
+    "fullName": "Décines-Charpieu",
+    "postalCode": "69150",
+    "seoTitle": "Plombier Décines-Charpieu (69150) — Dépannage Rapide | 24h/24",
+    "metaDescription": "Plombier à Décines-Charpieu disponible 24h/24. Dépannage plomberie urgent, intervention en 25 min. Fuite, débouchage, chauffe-eau.",
+    "h1": "Plombier à Décines-Charpieu — Intervention rapide",
+    "introduction": "Décines-Charpieu, à l'est de la métropole de Lyon, a connu un fort développement ces dernières années. Entre les pavillons du vieux Décines, les résidences neuves autour du Grand Stade (Groupama Stadium) et le quartier de Charpieu, les besoins en plomberie sont variés. Intervention en 25 minutes.",
+    "quartiersCouverts": ["Centre Décines", "Charpieu", "Le Prainet", "Les Battières", "Secteur Grand Stade"],
+    "tempsIntervention": "25 minutes",
+    "specificites": [
+      "Pavillons anciens (vieux Décines) : canalisations vétustes, recherche de fuite en jardin",
+      "Résidences neuves (secteur OL) : malfaçons possibles sur installations récentes, garantie décennale",
+      "Quartier Charpieu : maisons individuelles, assainissement mixte",
+      "Développement rapide : raccordements neufs, mises en conformité"
+    ],
+    "testimonial": {
+      "name": "Sandrine L.",
+      "text": "Débouchage de canalisation dans notre maison à Charpieu. Le plombier est venu avec un camion hydrocureur et a réglé le problème en moins d'une heure. Très bon rapport qualité-prix.",
+      "rating": 5
+    },
+    "zonesVoisines": ["plombier-villeurbanne", "plombier-bron"]
+  }
+]

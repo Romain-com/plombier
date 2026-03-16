@@ -1,0 +1,106 @@
+---
+import TrustBadges from './TrustBadges.astro';
+import CTACall from './CTACall.astro';
+import siteData from '../data/site-data.json';
+
+export interface Props {
+  title: string;
+  subtitle?: string;
+  showCTA?: boolean;
+}
+
+const { title, subtitle, showCTA = true } = Astro.props;
+const phone = siteData.company.phone;
+---
+
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+    <h1 class="hero-title">{title}</h1>
+    {subtitle && <p class="hero-subtitle">{subtitle}</p>}
+    {showCTA && (
+      <div class="hero-actions">
+        <CTACall variant="inline" text={`Appeler — ${phone}`} />
+        <a href="#tarifs" class="btn btn-outline">Devis gratuit</a>
+      </div>
+    )}
+    <div class="hero-badges">
+      <TrustBadges />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+    padding-block: var(--space-3xl);
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, var(--color-primary-light) 100%);
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      min-height: 65vh;
+      padding-block: var(--space-4xl);
+    }
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 80%, rgba(95, 168, 211, 0.15) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(244, 162, 97, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .hero-title {
+    font-size: var(--text-3xl);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: var(--space-md);
+  }
+
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: var(--text-5xl);
+    }
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-lg);
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: var(--space-xl);
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  @media (min-width: 768px) {
+    .hero-subtitle {
+      font-size: var(--text-xl);
+    }
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .hero-badges {
+    margin-top: var(--space-md);
+  }
+</style>

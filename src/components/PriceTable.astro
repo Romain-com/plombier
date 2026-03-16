@@ -1,0 +1,93 @@
+---
+import prices from '../data/prices.json';
+---
+
+<div class="price-table-wrapper">
+  <table class="price-table">
+    <thead>
+      <tr>
+        <th scope="col">Prestation</th>
+        <th scope="col">Tarif</th>
+        <th scope="col">Détail</th>
+      </tr>
+    </thead>
+    <tbody>
+      {prices.map((item) => (
+        <tr>
+          <td class="price-service">{item.service}</td>
+          <td class="price-amount">{item.price}</td>
+          <td class="price-note">{item.note || '—'}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+<p class="price-disclaimer">
+  * Ces tarifs ne tiennent pas compte des majorations soirs, week-end et jours fériés.
+  Devis gratuit du lundi au vendredi de 8h à 18h.
+</p>
+
+<style>
+  .price-table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    background: #fff;
+  }
+
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  .price-table thead {
+    background-color: var(--color-primary);
+    color: #fff;
+  }
+
+  .price-table th {
+    padding: var(--space-md) var(--space-lg);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .price-table td {
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+    font-size: var(--text-base);
+  }
+
+  .price-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .price-table tbody tr:hover {
+    background-color: var(--color-bg-alt);
+  }
+
+  .price-service {
+    font-weight: 600;
+    color: var(--color-primary-dark);
+  }
+
+  .price-amount {
+    font-weight: 700;
+    color: var(--color-accent-dark);
+    white-space: nowrap;
+  }
+
+  .price-note {
+    color: var(--color-text-light);
+    font-size: var(--text-sm);
+  }
+
+  .price-disclaimer {
+    text-align: center;
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    margin-top: var(--space-lg);
+  }
+</style>

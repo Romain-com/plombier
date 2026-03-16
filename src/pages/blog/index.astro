@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostCard from '../../components/BlogPostCard.astro';
+
+const blogPosts = [
+  {
+    slug: 'que-faire-fuite-eau',
+    title: "Que faire en cas de fuite d'eau ? Guide complet",
+    excerpt: "Fuite d'eau chez vous ? Voici les gestes d'urgence à adopter immédiatement, étape par étape. Et quand appeler un plombier.",
+    date: '2025-01-15',
+  },
+  {
+    slug: 'comment-couper-eau-appartement',
+    title: "Comment couper l'eau dans un appartement ?",
+    excerpt: "Besoin de couper l'eau en urgence dans votre appartement ? Voici comment trouver et utiliser le robinet d'arrêt, étape par étape.",
+    date: '2025-02-01',
+  },
+  {
+    slug: 'comment-deboucher-evier',
+    title: 'Comment déboucher un évier ? 5 méthodes efficaces',
+    excerpt: 'Évier bouché ? Découvrez 5 méthodes efficaces pour déboucher votre évier vous-même, et quand faire appel à un plombier.',
+    date: '2025-02-15',
+  },
+  {
+    slug: 'pourquoi-chauffe-eau-fuit',
+    title: 'Pourquoi mon chauffe-eau fuit ? Causes et solutions',
+    excerpt: 'Votre chauffe-eau fuit ? Découvrez les 5 causes principales et les solutions pour chaque cas. Quand réparer, quand remplacer.',
+    date: '2025-03-01',
+  },
+  {
+    slug: 'wc-bouche-que-faire',
+    title: 'WC bouché : que faire ? Solutions rapides',
+    excerpt: "WC bouché ? Voici les solutions à tester immédiatement chez vous, et quand appeler un plombier en urgence.",
+    date: '2025-03-15',
+  },
+];
+---
+
+<BaseLayout
+  title="Conseils Plomberie | Blog Plombier Lyon"
+  description="Conseils et astuces plomberie par votre plombier à Lyon : fuites d'eau, débouchage, chauffe-eau. Guides pratiques pour résoudre vos problèmes."
+  canonicalPath="/blog/"
+>
+  <section class="blog-hero section-alt">
+    <div class="container">
+      <h1>Conseils plomberie — Guides pratiques</h1>
+      <p class="blog-hero-subtitle">
+        Nos guides pour vous aider à réagir face aux problèmes de plomberie les plus courants.
+        Et quand faire appel à un professionnel.
+      </p>
+    </div>
+  </section>
+
+  <section class="blog-list section">
+    <div class="container">
+      <div class="blog-grid">
+        {blogPosts.map((post) => (
+          <BlogPostCard
+            slug={post.slug}
+            title={post.title}
+            excerpt={post.excerpt}
+            date={post.date}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .blog-hero {
+    padding-block: var(--space-3xl);
+    text-align: center;
+  }
+
+  .blog-hero h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-md);
+  }
+
+  .blog-hero-subtitle {
+    max-width: 600px;
+    margin-inline: auto;
+    color: var(--color-text-light);
+    font-size: var(--text-lg);
+    line-height: 1.6;
+  }
+
+  .blog-grid {
+    display: grid;
+    gap: var(--space-xl);
+  }
+
+  @media (min-width: 640px) {
+    .blog-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .blog-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

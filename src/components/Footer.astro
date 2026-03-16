@@ -1,0 +1,207 @@
+---
+import siteData from '../data/site-data.json';
+import services from '../data/services.json';
+import zones from '../data/zones.json';
+
+const { company } = siteData;
+const mainZones = zones.filter(z => z.slug.startsWith('plombier-lyon-'));
+const otherZones = zones.filter(z => !z.slug.startsWith('plombier-lyon-'));
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Company info -->
+      <div class="footer-col footer-about">
+        <h3 class="footer-heading">{company.name}</h3>
+        <p class="footer-desc">Artisan plombier à Lyon depuis plus de 20 ans. Dépannage urgent 24h/24, 7j/7. Intervention en 30 minutes.</p>
+        <a href={`tel:${company.phoneRaw}`} class="footer-phone" aria-label={`Appeler le ${company.phone}`}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          {company.phone}
+        </a>
+        <address class="footer-address">
+          {company.address.street}<br />
+          {company.address.postalCode} {company.address.city}
+        </address>
+        <p class="footer-hours">
+          <strong>Urgences :</strong> {company.hours.urgences}<br />
+          <strong>Devis gratuit :</strong> {company.hours.devisGratuit}
+        </p>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <h3 class="footer-heading">Nos services</h3>
+        <ul class="footer-links">
+          {services.map((service) => (
+            <li><a href={`/services/${service.slug}/`}>{service.title}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Zones -->
+      <div class="footer-col">
+        <h3 class="footer-heading">Lyon</h3>
+        <ul class="footer-links footer-zones">
+          {mainZones.map((zone) => (
+            <li><a href={`/zones/${zone.slug}/`}>{zone.name}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Other zones + Blog -->
+      <div class="footer-col">
+        <h3 class="footer-heading">Métropole</h3>
+        <ul class="footer-links">
+          {otherZones.map((zone) => (
+            <li><a href={`/zones/${zone.slug}/`}>{zone.name}</a></li>
+          ))}
+        </ul>
+        <h3 class="footer-heading" style="margin-top: var(--space-lg);">Ressources</h3>
+        <ul class="footer-links">
+          <li><a href="/blog/">Blog — Conseils plomberie</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} {company.name} — Tous droits réservés</p>
+      <div class="footer-bottom-links">
+        <a href={`tel:${company.phoneRaw}`}>{company.phone}</a>
+        <span aria-hidden="true">|</span>
+        <a href={`mailto:${company.email}`}>{company.email}</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-inverse);
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-lg);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
+  }
+
+  @media (min-width: 640px) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+  }
+
+  .footer-heading {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: var(--space-md);
+  }
+
+  .footer-desc {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+  }
+
+  .footer-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-md);
+    transition: color var(--transition-fast);
+  }
+
+  .footer-phone:hover {
+    color: var(--color-accent-light);
+  }
+
+  .footer-address {
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+  }
+
+  .footer-hours {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: var(--text-sm);
+    line-height: 1.8;
+  }
+
+  .footer-hours strong {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .footer-links li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: var(--text-sm);
+    transition: color var(--transition-fast);
+    display: inline-block;
+    padding-block: 2px;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-accent);
+  }
+
+  .footer-zones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 var(--space-sm);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    align-items: center;
+    text-align: center;
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  @media (min-width: 768px) {
+    .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .footer-bottom-links {
+    display: flex;
+    gap: var(--space-sm);
+  }
+
+  .footer-bottom-links a {
+    color: rgba(255, 255, 255, 0.5);
+    transition: color var(--transition-fast);
+  }
+
+  .footer-bottom-links a:hover {
+    color: var(--color-accent);
+  }
+</style>

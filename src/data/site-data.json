@@ -1,0 +1,103 @@
+{
+  "company": {
+    "name": "ETS Roche Père et Fils",
+    "shortName": "Plomberie Roche",
+    "tagline": "Votre plombier à Lyon en 30 minutes",
+    "description": "Plombier à Lyon disponible 24h/24 et 7j/7. Intervention en moins de 30 minutes pour tous vos travaux de plomberie : fuite d'eau, débouchage canalisation, réparation chauffe-eau.",
+    "phone": "04 72 07 07 07",
+    "phoneRaw": "+33472070707",
+    "email": "etsroche@live.fr",
+    "address": {
+      "street": "21 avenue Lacassagne",
+      "postalCode": "69003",
+      "city": "Lyon",
+      "country": "France",
+      "full": "21 avenue Lacassagne, 69003 Lyon"
+    },
+    "rcs": "813 708 252",
+    "siteUrl": "https://lyon.plomberie-roche.fr",
+    "rating": {
+      "value": 5,
+      "count": 50,
+      "platform": "Google"
+    },
+    "experience": "Plus de 20 ans",
+    "interventionTime": "30 minutes",
+    "availability": "24h/24, 7j/7, 365 jours par an",
+    "hours": {
+      "devisGratuit": "Lundi au vendredi de 8h à 18h",
+      "urgences": "24h/24 — 7j/7"
+    },
+    "satisfactionRate": "97,8%",
+    "logo": "/images/logo-plomberie-roche.png"
+  },
+  "seo": {
+    "titleHome": "Plombier Lyon — Dépannage Urgent 24h/24 | Intervention 30 minutes",
+    "metaDescriptionHome": "Plombier à Lyon ☎ 04 72 07 07 07 ☎ ETS Roche intervient 24H/24 et 7J/7 en moins de 30 minutes pour vos travaux de plomberie. Devis gratuit.",
+    "ogImage": "/images/og-plombier-lyon.jpg"
+  },
+  "existingContent": {
+    "heroTitle": "Dépannage d'urgence de plomberie en 30 minutes",
+    "heroSubtitle": "Plombier Lyon — Roche Père et Fils",
+    "mainPitch": "Un problème de fuite d'eau ? Des toilettes bouchés ? Un évier qui refuse de se vider ? Plus d'eau chaude au robinet ? Pour tous ces problèmes, les artisans Roche déroule le tapis rouge et vous fournissent un service 5 étoiles.",
+    "trustText": "Parce que les problèmes de plomberie peuvent rapidement nuire à votre sécurité, et à la pérennité de votre habitation, notre plombier à Lyon interviendra en 30 minutes à la suite de votre appel, dans le centre ville mais également l'ensemble des communes de la métropole lyonnaise.",
+    "experienceText": "5 étoiles, c'est également la note que nos clients ont décidés de nous réserver dans les évaluations Google, fruit d'un travail sérieux dans les règles de l'art depuis maintenant plus de 20 ans.",
+    "aboutText": "En choisissant l'entreprise Roche Père et Fils, vous confiez votre dépannage à un leader du marché au service de ses clients depuis plus de 20 ans. Nos techniciens disposent d'une expertise et d'un savoir-faire nous permettant de répondre à toutes les sollicitations et offrir un dépannage de qualité à nos clients particuliers comme professionnels. Entreprise familiale depuis plusieurs décennies, la satisfaction de nos clients est au cœur de nos priorités.",
+    "guaranteeText": "Tous nos travaux sont garantis pièce et main d'œuvre.",
+    "installationText": "L'entreprise Roche Père et Fils est également spécialisée dans l'installation de plomberie et de sanitaire à Lyon. Sur simple rendez-vous, un technicien spécialisé se rendra gratuitement à votre domicile ou votre entreprise pour étudier votre demande.",
+    "sanibroyeurText": "Depuis plus de 20 ans nous sommes les spécialistes du sanibroyeur à Lyon. Fort de notre expérience, nous pouvons intervenir pour le dépannage et l'installation multimarques."
+  },
+  "navigation": {
+    "main": [
+      { "label": "Accueil", "href": "/" },
+      { "label": "Services", "href": "/#services", "children": [
+        { "label": "Fuite d'eau", "href": "/services/fuite-eau-lyon/" },
+        { "label": "Débouchage canalisation", "href": "/services/debouchage-canalisation-lyon/" },
+        { "label": "Réparation chauffe-eau", "href": "/services/reparation-chauffe-eau-lyon/" },
+        { "label": "WC bouché", "href": "/services/wc-bouche-lyon/" },
+        { "label": "Recherche de fuite", "href": "/services/recherche-fuite-lyon/" },
+        { "label": "Installation chauffe-eau", "href": "/services/installation-chauffe-eau-lyon/" }
+      ]},
+      { "label": "Zones", "href": "/#zones" },
+      { "label": "Blog", "href": "/blog/" }
+    ]
+  },
+  "existingUrls": {
+    "services": [
+      "https://lyon.plomberie-roche.fr/depannage-plomberie-lyon/fuite-eau-lyon/",
+      "https://lyon.plomberie-roche.fr/depannage-plomberie-lyon/chauffe-eau-lyon/",
+      "https://lyon.plomberie-roche.fr/depannage-plomberie-lyon/cumulus-lyon/",
+      "https://lyon.plomberie-roche.fr/depannage-plomberie-lyon/remplacement-chaudiere-lyon/",
+      "https://lyon.plomberie-roche.fr/depannage-plomberie-lyon/debouchage-wc-lyon/",
+      "https://lyon.plomberie-roche.fr/depannage-plomberie-lyon/sanibroyeur-lyon/",
+      "https://lyon.plomberie-roche.fr/depannage-plomberie-lyon/debouchage-canalisation-lyon/"
+    ],
+    "zones": [
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-lyon-1/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-lyon-2/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-lyon-3/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-lyon-4/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-lyon-5/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-lyon-6/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-lyon-7/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-lyon-8/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-lyon-9/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-corbas/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-ecully/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-feyzin/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-la-mulatiere/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-saint-fons/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-saint-priest/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-venissieux/",
+      "https://lyon.plomberie-roche.fr/zone-intervention-depannage-plomberie/plombier-villeurbanne/"
+    ],
+    "other": [
+      "https://lyon.plomberie-roche.fr/renovation-de-salle-de-bain-lyon/",
+      "https://lyon.plomberie-roche.fr/adoucisseur-eau-lyon/",
+      "https://lyon.plomberie-roche.fr/contact-plombier-a-lyon/",
+      "https://lyon.plomberie-roche.fr/plombier-lyon/tarifs-plombier-lyon/",
+      "https://lyon.plomberie-roche.fr/actualite-plomberie-lyon/",
+      "https://lyon.plomberie-roche.fr/mentions-legales/"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+---
+import ServicePageLayout from '../../layouts/ServicePageLayout.astro';
+
+const faqs = [
+  {
+    question: "Mon WC déborde, que faire en attendant le plombier ?",
+    answer: "Ne tirez surtout plus la chasse d'eau. Fermez le robinet d'arrivée d'eau situé derrière ou sous la cuvette pour stopper l'alimentation. Épongez l'eau au sol si nécessaire et aérez la pièce. Notre plombier arrive en 30 minutes."
+  },
+  {
+    question: "Intervenez-vous la nuit pour un WC bouché ?",
+    answer: "Oui, nous intervenons 24 heures sur 24, 7 jours sur 7, y compris les nuits, week-ends et jours fériés. Un WC bouché est une urgence que nous traitons en priorité."
+  },
+  {
+    question: "Les lingettes peuvent-elles vraiment boucher les WC ?",
+    answer: "Oui, c'est l'une des causes les plus fréquentes de bouchon. Même les lingettes dites « biodégradables » ne se dissolvent pas assez vite dans l'eau et s'accumulent dans le siphon ou la canalisation, créant un bouchon tenace."
+  }
+];
+---
+
+<ServicePageLayout
+  slug="wc-bouche-lyon"
+  seoTitle="WC Bouché Lyon — Débouchage Urgent 24h/24 | Plombier Lyon"
+  metaDescription="WC bouché à Lyon ? Intervention urgente 24h/24 pour déboucher vos toilettes. Plombier professionnel, intervention en 30 min, tarif clair."
+  h1="WC bouché à Lyon — Débouchage urgent 24h/24"
+  subtitle="L'eau monte dans la cuvette ? Pas de panique. Notre plombier intervient en urgence pour déboucher vos toilettes rapidement et proprement."
+  problemTitle="Un WC bouché : l'urgence qu'il faut traiter immédiatement"
+  problemText="Un WC bouché est l'une des urgences plomberie les plus stressantes du quotidien. L'eau monte dangereusement dans la cuvette, le risque de débordement est réel, et l'utilisation des toilettes devient impossible pour tout le foyer. Dans un immeuble, un refoulement peut même toucher les voisins. Il faut agir vite pour éviter des dégâts sanitaires et matériels."
+  causesTitle="Pourquoi vos WC sont bouchés"
+  causes={[
+    "Excès de papier toilette accumulé dans le siphon",
+    "Lingettes, cotons-tiges ou objets jetés dans la cuvette",
+    "Bouchon installé dans le siphon ou plus loin dans la canalisation",
+    "Problème sur la colonne d'évacuation de l'immeuble",
+    "Accumulation de calcaire réduisant le diamètre de l'évacuation"
+  ]}
+  interventionTitle="Notre intervention de débouchage WC"
+  steps={[
+    "Arrivée rapide sur place — les WC bouchés sont traités en urgence prioritaire",
+    "Diagnostic de la nature et de la localisation du bouchon",
+    "Débouchage adapté : ventouse professionnelle, furet mécanique ou hydrocurage",
+    "Vérification de l'évacuation complète par plusieurs tests de chasse",
+    "Nettoyage et désinfection de la zone d'intervention"
+  ]}
+  priceLabel="À partir de 90€"
+  priceNote="Hors déplacement 60€ — Devis gratuit avant intervention"
+  faqs={faqs}
+/>

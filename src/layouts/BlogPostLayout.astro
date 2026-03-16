@@ -1,0 +1,368 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import CTACall from '../components/CTACall.astro';
+import BlogPostCard from '../components/BlogPostCard.astro';
+import siteData from '../data/site-data.json';
+import { generateArticleSchema, generateHowToSchema } from '../utils/seo';
+
+export interface Props {
+  title: string;
+  seoTitle: string;
+  description: string;
+  canonicalPath: string;
+  date: string;
+  relatedArticles: { slug: string; title: string; excerpt: string; date: string }[];
+  serviceLinks: { href: string; label: string }[];
+  howToSchema?: { name: string; description: string; steps: { name: string; text: string }[] };
+}
+
+const {
+  title,
+  seoTitle,
+  description,
+  canonicalPath,
+  date,
+  relatedArticles,
+  serviceLinks,
+  howToSchema,
+} = Astro.props;
+
+const articleSchema = generateArticleSchema({
+  headline: title,
+  description,
+  datePublished: date,
+  url: canonicalPath,
+});
+
+const extraSchema: object[] = [articleSchema];
+if (howToSchema) {
+  extraSchema.push(generateHowToSchema(howToSchema));
+}
+
+const formattedDate = new Date(date).toLocaleDateString('fr-FR', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+
+const phone = siteData.company.phone;
+const phoneRaw = siteData.company.phoneRaw;
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={description}
+  canonicalPath={canonicalPath}
+  ogType="article"
+  extraSchema={extraSchema}
+>
+  <!-- Fil d'Ariane -->
+  <nav class="breadcrumb section" aria-label="Fil d'Ariane">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li aria-current="page">{title}</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Article -->
+  <article class="blog-article">
+    <div class="container article-container">
+      <header class="article-header">
+        <time class="article-date" datetime={date}>{formattedDate}</time>
+        <h1>{title}</h1>
+      </header>
+
+      <div class="article-content">
+        <slot />
+      </div>
+
+      <!-- CTA -->
+      <aside class="article-cta">
+        <div class="cta-box">
+          <h2 class="cta-title">Le problème persiste ?</h2>
+          <p class="cta-text">Appelez votre plombier à Lyon — intervention en 30 minutes, 24h/24 et 7j/7.</p>
+          <a href={`tel:${phoneRaw}`} class="btn btn-primary cta-phone-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            {phone}
+          </a>
+        </div>
+      </aside>
+
+      <!-- Liens services -->
+      {serviceLinks.length > 0 && (
+        <nav class="article-services" aria-label="Services associés">
+          <h2>Services associés</h2>
+          <ul class="services-list">
+            {serviceLinks.map((link) => (
+              <li>
+                <a href={link.href} class="service-link">
+                  {link.label}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
+
+      <!-- Articles connexes -->
+      {relatedArticles.length > 0 && (
+        <section class="related-articles" aria-label="Articles connexes">
+          <h2>Articles connexes</h2>
+          <div class="related-grid">
+            {relatedArticles.map((article) => (
+              <BlogPostCard
+                slug={article.slug}
+                title={article.title}
+                excerpt={article.excerpt}
+                date={article.date}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  /* Breadcrumb */
+  .breadcrumb {
+    padding-block: var(--space-md);
+    background-color: var(--color-bg-alt);
+  }
+
+  .breadcrumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+  }
+
+  .breadcrumb-list li:not(:last-child)::after {
+    content: '›';
+    margin-left: var(--space-xs);
+    color: var(--color-text-light);
+  }
+
+  .breadcrumb-list a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .breadcrumb-list a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-list [aria-current="page"] {
+    color: var(--color-text);
+    font-weight: 500;
+  }
+
+  /* Article */
+  .blog-article {
+    padding-block: var(--space-3xl);
+  }
+
+  .article-container {
+    max-width: 800px;
+  }
+
+  .article-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .article-date {
+    display: block;
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+  }
+
+  .article-header h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.2;
+    color: var(--color-primary-dark);
+  }
+
+  /* Article content */
+  .article-content {
+    line-height: 1.8;
+    font-size: var(--text-base);
+  }
+
+  .article-content :global(h2) {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    color: var(--color-primary-dark);
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .article-content :global(h3) {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--color-primary);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .article-content :global(p) {
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+  }
+
+  .article-content :global(ul),
+  .article-content :global(ol) {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-xl);
+  }
+
+  .article-content :global(li) {
+    margin-bottom: var(--space-sm);
+  }
+
+  .article-content :global(strong) {
+    color: var(--color-primary-dark);
+    font-weight: 600;
+  }
+
+  .article-content :global(.inline-cta) {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: #fff;
+    padding: var(--space-lg) var(--space-xl);
+    border-radius: var(--radius-lg);
+    margin: var(--space-2xl) 0;
+    text-align: center;
+  }
+
+  .article-content :global(.inline-cta p) {
+    color: #fff;
+    margin-bottom: var(--space-sm);
+    font-size: var(--text-lg);
+    font-weight: 600;
+  }
+
+  .article-content :global(.inline-cta a) {
+    color: var(--color-accent-light);
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  .article-content :global(.inline-cta a:hover) {
+    color: #fff;
+  }
+
+  /* CTA box */
+  .article-cta {
+    margin-top: var(--space-3xl);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .cta-box {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: #fff;
+    padding: var(--space-2xl);
+    border-radius: var(--radius-xl);
+    text-align: center;
+  }
+
+  .cta-title {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-sm);
+    color: #fff;
+  }
+
+  .cta-text {
+    margin-bottom: var(--space-lg);
+    opacity: 0.9;
+    color: #fff;
+  }
+
+  .cta-phone-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-lg);
+    padding: var(--space-md) var(--space-xl);
+  }
+
+  /* Services links */
+  .article-services {
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-xl);
+    background-color: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+  }
+
+  .article-services h2 {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-md);
+  }
+
+  .services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    list-style: none;
+    padding: 0;
+  }
+
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: var(--text-sm);
+    transition: all var(--transition-fast);
+  }
+
+  .service-link:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+  }
+
+  /* Related articles */
+  .related-articles {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-2xl);
+  }
+
+  .related-articles h2 {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-lg);
+  }
+
+  .related-grid {
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  @media (min-width: 640px) {
+    .related-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .related-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

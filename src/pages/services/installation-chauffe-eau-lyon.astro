@@ -1,0 +1,48 @@
+---
+import ServicePageLayout from '../../layouts/ServicePageLayout.astro';
+
+const faqs = [
+  {
+    question: "Quel type de chauffe-eau choisir ?",
+    answer: "Le chauffe-eau électrique est le plus courant et le plus simple à installer. Si vous êtes raccordé au gaz, un chauffe-eau gaz est une bonne option. Pour les plus économes, le chauffe-eau thermodynamique réduit la consommation d'énergie jusqu'à 70%. Nous vous conseillons le modèle le plus adapté à votre foyer lors de la visite conseil."
+  },
+  {
+    question: "Combien de temps dure l'installation d'un chauffe-eau ?",
+    answer: "Pour un remplacement standard (dépose de l'ancien, pose du nouveau, raccordements et mise en service), comptez entre 2 et 4 heures. Un premier cycle de chauffe est nécessaire avant de disposer d'eau chaude, soit 4 à 6 heures supplémentaires sur un ballon électrique."
+  },
+  {
+    question: "Récupérez-vous l'ancien chauffe-eau ?",
+    answer: "Oui, la dépose et l'évacuation de l'ancien appareil sont incluses dans notre prestation. Nous le transportons vers un centre de recyclage agréé, vous n'avez rien à gérer."
+  }
+];
+---
+
+<ServicePageLayout
+  slug="installation-chauffe-eau-lyon"
+  seoTitle="Installation Chauffe-eau Lyon — Pose & Remplacement | Plombier Lyon"
+  metaDescription="Installation et remplacement de chauffe-eau à Lyon. Pose professionnelle : électrique, gaz, thermodynamique. Devis gratuit, intervention rapide."
+  h1="Installation de chauffe-eau à Lyon — Pose et remplacement"
+  subtitle="Remplacement d'un chauffe-eau vétuste ou installation dans un logement neuf : nous posons votre nouvel appareil avec soin et dans les règles."
+  problemTitle="Pourquoi remplacer ou installer un chauffe-eau ?"
+  problemText="Votre chauffe-eau a plus de 10 ans et montre des signes de fatigue ? Il tombe en panne régulièrement et les réparations s'accumulent ? La cuve est percée et l'appareil ne peut plus être réparé ? Ou vous emménagez dans un logement qui ne dispose pas d'eau chaude ? L'installation d'un chauffe-eau neuf vous garantit un confort retrouvé, une meilleure efficacité énergétique et des économies sur votre facture."
+  causesTitle="Les raisons courantes d'un remplacement"
+  causes={[
+    "Chauffe-eau de plus de 10 à 15 ans, dont le rendement diminue",
+    "Pannes répétitives : il devient plus rentable de remplacer que de réparer",
+    "Cuve percée par la corrosion — panne non réparable",
+    "Passage à un modèle plus économe comme le chauffe-eau thermodynamique",
+    "Emménagement ou rénovation complète du logement"
+  ]}
+  interventionTitle="Les étapes de notre installation"
+  steps={[
+    "Visite conseil gratuite : évaluation de vos besoins selon la taille du foyer et l'espace disponible",
+    "Recommandation du modèle le plus adapté à votre situation et votre budget",
+    "Devis détaillé incluant la fourniture, la pose et les raccordements",
+    "Dépose soignée de l'ancien appareil et évacuation vers un centre de recyclage",
+    "Installation du nouveau chauffe-eau, raccordements eau et énergie, mise en service",
+    "Explication du fonctionnement, réglage et conseils d'entretien"
+  ]}
+  priceLabel="À partir de 200€"
+  priceNote="Pose seule — Hors fourniture et déplacement 60€ — Devis gratuit"
+  faqs={faqs}
+/>

@@ -1,0 +1,87 @@
+---
+import { generateFAQSchema } from '../utils/seo';
+
+export interface Props {
+  faqs: { question: string; answer: string }[];
+  injectSchema?: boolean;
+}
+
+const { faqs, injectSchema = false } = Astro.props;
+const faqSchema = injectSchema ? generateFAQSchema(faqs) : null;
+---
+
+{faqSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+)}
+
+<div class="faq-accordion">
+  {faqs.map((faq, index) => (
+    <details class="faq-item" name="faq">
+      <summary class="faq-question">
+        <span>{faq.question}</span>
+        <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+      </summary>
+      <div class="faq-answer">
+        <p>{faq.answer}</p>
+      </div>
+    </details>
+  ))}
+</div>
+
+<style>
+  .faq-accordion {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .faq-item:first-child {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: var(--space-lg) var(--space-sm);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: var(--text-base);
+    color: var(--color-primary-dark);
+    list-style: none;
+    transition: color var(--transition-fast);
+    min-height: 48px;
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question:hover {
+    color: var(--color-accent);
+  }
+
+  .faq-chevron {
+    flex-shrink: 0;
+    transition: transform var(--transition-base);
+    color: var(--color-text-light);
+  }
+
+  .faq-item[open] .faq-chevron {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    padding: 0 var(--space-sm) var(--space-lg);
+  }
+
+  .faq-answer p {
+    color: var(--color-text-light);
+    line-height: 1.7;
+    font-size: var(--text-base);
+  }
+</style>

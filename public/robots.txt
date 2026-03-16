@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lyon.plomberie-roche.fr/sitemap-index.xml
